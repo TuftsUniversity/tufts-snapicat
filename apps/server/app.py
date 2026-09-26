@@ -8,6 +8,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
+from dotenv import load_dotenv
+
+load_dotenv()
 # Load environment variables from .env file if it exists
 try:
     from dotenv import load_dotenv
