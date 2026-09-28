@@ -3,48 +3,28 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-console.log('### LOADING SNAPICAT VITE CONFIG ###')
-
 export default defineConfig({
-	plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss()],
 
-	resolve: {
-		alias: {
-			'@': path.resolve(__dirname, './src'),
-		},
-	},
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './src'),
+        },
+    },
 
-	server: {
-		port: 5174,
+    server: {
+        host: '0.0.0.0',
+        port: 5000,
 
-		proxy: {
-			'/api': {
-				target: 'http://127.0.0.1:8080',
-				changeOrigin: true,
+        allowedHosts: [
+            'stacked-gantt-stage.library.tufts.edu',
+        ],
 
-				configure: (proxy) => {
-					console.log('### FASTAPI PROXY CONFIGURED ###')
-
-					proxy.on('proxyReq', (_proxyReq, req) => {
-						console.log(
-							`### PROXY REQUEST: ${req.method} ${req.url}`,
-						)
-					})
-
-					proxy.on('proxyRes', (proxyRes, req) => {
-						console.log(
-							`### PROXY RESPONSE: ${proxyRes.statusCode} ${req.url}`,
-						)
-					})
-
-					proxy.on('error', (error, req) => {
-						console.error(
-							`### PROXY ERROR: ${req.method} ${req.url}`,
-							error,
-						)
-					})
-				},
-			},
-		},
-	},
+        proxy: {
+            '/api': {
+                target: 'http://127.0.0.1:8080',
+                changeOrigin: true,
+            },
+        },
+    },
 })
