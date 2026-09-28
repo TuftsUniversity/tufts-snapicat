@@ -1,4 +1,3 @@
-import { useAuth } from '@/context/authContext'
 import { useToast } from '@/hooks/use-toast'
 import axios from 'axios'
 import React from 'react'
@@ -28,12 +27,14 @@ export interface SearchResponse {
 const createApiInstance = () => {
 	return axios.create({
 		baseURL: import.meta.env.VITE_API_BASE_URL,
-		timeout: 2700000, // 45 minutes (2700000ms) to handle long-running search operations
+		timeout: 2700000, // 45 minutes
+		withCredentials: true,
 	})
 }
 
 const debounce = (func: Function, wait: number) => {
-	let timeout: NodeJS.Timeout
+	let timeout: ReturnType<typeof setTimeout>
+
 	return (...args: any[]) => {
 		clearTimeout(timeout)
 		timeout = setTimeout(() => func(...args), wait)
@@ -41,7 +42,6 @@ const debounce = (func: Function, wait: number) => {
 }
 
 export const useApi = () => {
-	const { accessToken, logout, getValidAccessToken } = useAuth()
 	const { toast } = useToast()
 
 	const showErrorToast = React.useMemo(
@@ -59,92 +59,115 @@ export const useApi = () => {
 	const api = React.useMemo(() => {
 		const instance = createApiInstance()
 
-		instance.interceptors.request.use(
-			async (config) => {
-				// Ensure token validity for at least 10 minutes before making the request
-				const token = (await getValidAccessToken?.(10 * 60 * 1000)) || accessToken
-				if (token) {
-					config.headers.Authorization = `Bearer ${token}`
-				}
-				return config
-			},
-			(error) => Promise.reject(error),
-		)
-
 		instance.interceptors.response.use(
 			(response) => response,
 			async (error) => {
 				if (error.code === 'ECONNABORTED') {
-					showErrorToast('Request Timeout', 'The request took too long to complete.')
+					showErrorToast(
+						'Request Timeout',
+						'The request took too long to complete.',
+					)
+
+					return Promise.reject(error)
 				}
 
 				if (error.code === 'ERR_NETWORK') {
-					showErrorToast('Network Error', 'Please check your internet connection.')
+					showErrorToast(
+						'Network Error',
+						'Please check your internet connection.',
+					)
+
+					return Promise.reject(error)
 				}
 
 				if (error.response) {
 					const { status, data } = error.response
 
-					// Handle MSAL-specific errors
-					if (data?.error === 'invalid_grant' || data?.error === 'interaction_required') {
-						if (data?.error_description?.includes('consent_required')) {
-							showErrorToast(
-								'Consent Required',
-								'Please provide consent to access the application. You will be logged out to re-authenticate.',
-							)
-							setTimeout(() => {
-								logout()
-							}, 3000)
-							return Promise.reject(error)
-						}
-
-						if (data?.error_description?.includes('AADSTS65001')) {
-							showErrorToast(
-								'Authentication Required',
-								'Your session has expired. You will be logged out to re-authenticate.',
-							)
-							setTimeout(() => {
-								logout()
-							}, 3000)
-							return Promise.reject(error)
-						}
-					}
+					console.error('API request failed:', {
+						method: error.config?.method,
+						url: error.config?.url,
+						status,
+						data,
+					})
 
 					switch (status) {
 						case 400:
-							showErrorToast('Error', data.error || 'Invalid request')
-							break
-						case 401:
 							showErrorToast(
-								'Session Expired',
-								'Your session has expired. You will be logged out to re-authenticate.',
+								'Error',
+								data?.detail ||
+									data?.error ||
+									'Invalid request',
 							)
-							setTimeout(() => {
-								logout()
-							}, 3000)
 							break
+
+						case 401:
+							/*
+							 * IMPORTANT:
+							 *
+							 * Do NOT automatically call logout() here.
+							 *
+							 * A 401 can originate from an upstream service
+							 * such as OCLC. It does not necessarily mean that
+							 * the user's Snapicat session has expired.
+							 *
+							 * Local application authentication is verified
+							 * separately by /api/me in AuthProvider.
+							 */
+							showErrorToast(
+								'Unauthorized',
+								data?.detail ||
+									data?.error ||
+									'The API request was not authorized.',
+							)
+							break
+
 						case 403:
-							showErrorToast('Access Denied', 'You do not have permission to perform this action.')
+							showErrorToast(
+								'Access Denied',
+								data?.detail ||
+									data?.error ||
+									'You do not have permission to perform this action.',
+							)
 							break
+
 						case 404:
-							showErrorToast('Not Found', data.error || 'The requested resource was not found')
+							showErrorToast(
+								'Not Found',
+								data?.detail ||
+									data?.error ||
+									'The requested resource was not found.',
+							)
 							break
+
 						case 500:
-							showErrorToast('Server Error', 'Internal server error occurred.')
+							showErrorToast(
+								'Server Error',
+								data?.detail ||
+									data?.error ||
+									'Internal server error occurred.',
+							)
 							break
+
 						default:
-							showErrorToast('Error', 'Something went wrong!')
+							showErrorToast(
+								'Error',
+								data?.detail ||
+									data?.error ||
+									'Something went wrong!',
+							)
 					}
 				}
+
 				return Promise.reject(error)
 			},
 		)
 
 		return instance
-	}, [accessToken, logout, showErrorToast, getValidAccessToken])
+	}, [showErrorToast])
 
 	return api
 }
 
 const defaultApi = createApiInstance()
+
 export { defaultApi as api }

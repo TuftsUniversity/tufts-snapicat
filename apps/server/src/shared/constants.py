@@ -4,8 +4,8 @@ from datetime import datetime
 # API Configuration
 OCLC_API_BASE_URL = "https://metadata.api.oclc.org/worldcat"
 OCLC_OAUTH_URL = "https://oauth.oclc.org/token"
+#OCLC_OAUTH_SCOPE = "WorldCatMetadataAPI:view_brief_bib WorldCatMetadataAPI:manage_bibs"
 OCLC_OAUTH_SCOPE = "WorldCatMetadataAPI:view_brief_bib WorldCatMetadataAPI:manage_bibs"
-
 # Azure Configuration
 AZURE_AD_ISSUER_BASE = "https://login.microsoftonline.com"
 AZURE_AD_DISCOVERY_PATH = "/discovery/v2.0/keys"

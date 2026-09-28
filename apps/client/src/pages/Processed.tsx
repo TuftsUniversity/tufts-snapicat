@@ -153,6 +153,7 @@ const Processed = () => {
 	}
 
 	const handleGenerateXML = async (format: 'marcxml' | 'marc') => {
+		console.log('processedRecords:', processedRecords)
 		if (processedRecords.length === 0) {
 			toast({
 				title: 'No Records',

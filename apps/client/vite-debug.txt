@@ -1,0 +1,2055 @@
+
+> snAPIcat-client@0.0.0 dev
+> vite --debug
+
+2026-09-26T22:24:12.706Z vite:config config file loaded in 238.13ms
+2026-09-26T22:24:12.710Z vite:env loading env files: [
+  'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/.env',
+  'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/.env.local',
+  'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/.env.development',
+  'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/.env.development.local'
+]
+2026-09-26T22:24:12.712Z vite:env env files loaded in 1.52ms
+2026-09-26T22:24:12.713Z vite:env using resolved env: {
+  VITE_APP_TITLE: 'My OCLC App',
+  VITE_APP_NAME: 'My Library',
+  VITE_API_BASE_URL: '/api',
+  VITE_BATCH_SIZE: '1000',
+  VITE_AZURE_FE_APP_TENANT_ID: '',
+  VITE_AZURE_FE_APP_CLIENT_ID: '',
+  VITE_AZURE_BE_APP_CLIENT_ID: ''
+}
+2026-09-26T22:24:12.722Z vite:config using resolved config: {
+  plugins: [
+    'vite:optimized-deps',
+    'vite:watch-package-data',
+    'vite:pre-alias',
+    'alias',
+    'vite:react-babel',
+    'vite:react-refresh',
+    '@tailwindcss/vite:scan',
+    '@tailwindcss/vite:generate:serve',
+    'vite:modulepreload-polyfill',
+    'vite:resolve',
+    'vite:html-inline-proxy',
+    'vite:css',
+    'vite:esbuild',
+    'vite:json',
+    'vite:wasm-helper',
+    'vite:worker',
+    'vite:asset',
+    'vite:react-virtual-preamble',
+    'vite:wasm-fallback',
+    'vite:define',
+    'vite:css-post',
+    'vite:worker-import-meta-url',
+    'vite:asset-import-meta-url',
+    'vite:dynamic-import-vars',
+    'vite:import-glob',
+    'vite:client-inject',
+    'vite:css-analysis',
+    'vite:import-analysis'
+  ],
+  resolve: {
+    externalConditions: [ 'node', 'module-sync' ],
+    extensions: [
+      '.mjs',  '.js',
+      '.mts',  '.ts',
+      '.jsx',  '.tsx',
+      '.json'
+    ],
+    dedupe: [],
+    noExternal: [],
+    external: [],
+    preserveSymlinks: false,
+    alias: [
+      {
+        find: '@',
+        replacement: 'C:\\Users\\hsteel01\\Box\\01 - P Drive 2\\Alma\\Cataloging\\Snapicat\\snapicat\\apps\\client\\src'
+      },
+      {
+        find: /^\/?@vite\/env/,
+        replacement: '/@fs/C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/vite/dist/client/env.mjs'
+      },
+      {
+        find: /^\/?@vite\/client/,
+        replacement: '/@fs/C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/vite/dist/client/client.mjs'
+      }
+    ],
+    mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+    conditions: [ 'module', 'browser', 'development|production' ],
+    builtins: []
+  },
+  server: {
+    port: 5174,
+    strictPort: false,
+    host: undefined,
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {},
+    warmup: { clientFiles: [], ssrFiles: [] },
+    middlewareMode: false,
+    fs: {
+      strict: true,
+      deny: [ '.env', '.env.*', '*.{crt,pem}', '**/.git/**' ],
+      allow: [
+        'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client'
+      ]
+    },
+    preTransformRequests: true,
+    perEnvironmentStartEndDuringDev: false,
+    perEnvironmentWatchChangeDuringDev: false,
+    sourcemapIgnoreList: [Function: isInNodeModules]
+  },
+  esbuild: {
+    jsxDev: true,
+    charset: 'utf8',
+    legalComments: 'none',
+    jsx: 'automatic',
+    jsxImportSource: undefined
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react/jsx-dev-runtime',
+      'react/jsx-runtime'
+    ],
+    exclude: [],
+    needsInterop: [],
+    extensions: [],
+    disabled: undefined,
+    holdUntilCrawlEnd: true,
+    force: false,
+    noDiscovery: false,
+    esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' }
+  },
+  build: {
+    target: [ 'chrome107', 'edge107', 'firefox104', 'safari16' ],
+    polyfillModulePreload: true,
+    modulePreload: { polyfill: true },
+    outDir: 'dist',
+    assetsDir: 'assets',
+    assetsInlineLimit: 4096,
+    sourcemap: false,
+    terserOptions: {},
+    rollupOptions: { onwarn: [Function: onwarn] },
+    commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+    dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+    write: true,
+    emptyOutDir: null,
+    copyPublicDir: true,
+    license: false,
+    manifest: false,
+    lib: false,
+    ssrManifest: false,
+    ssrEmitAssets: false,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    watch: null,
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    ssr: false,
+    emitAssets: false,
+    createEnvironment: [Function: createEnvironment],
+    cssTarget: [ 'chrome107', 'edge107', 'firefox104', 'safari16' ],
+    cssMinify: true
+  },
+  environments: {
+    client: {
+      define: undefined,
+      resolve: {
+        externalConditions: [ 'node', 'module-sync' ],
+        extensions: [
+          '.mjs',  '.js',
+          '.mts',  '.ts',
+          '.jsx',  '.tsx',
+          '.json'
+        ],
+        dedupe: [],
+        noExternal: [],
+        external: [],
+        preserveSymlinks: false,
+        alias: [
+          {
+            find: '@',
+            replacement: 'C:\\Users\\hsteel01\\Box\\01 - P Drive 2\\Alma\\Cataloging\\Snapicat\\snapicat\\apps\\client\\src'
+          },
+          {
+            find: /^\/?@vite\/env/,
+            replacement: '/@fs/C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/vite/dist/client/env.mjs'
+          },
+          {
+            find: /^\/?@vite\/client/,
+            replacement: '/@fs/C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/vite/dist/client/client.mjs'
+          }
+        ],
+        mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+        conditions: [ 'module', 'browser', 'development|production' ],
+        builtins: []
+      },
+      keepProcessEnv: false,
+      consumer: 'client',
+      optimizeDeps: {
+        include: [
+          'react',
+          'react-dom',
+          'react/jsx-dev-runtime',
+          'react/jsx-runtime'
+        ],
+        exclude: [],
+        needsInterop: [],
+        extensions: [],
+        disabled: undefined,
+        holdUntilCrawlEnd: true,
+        force: false,
+        noDiscovery: false,
+        esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' }
+      },
+      dev: {
+        warmup: [],
+        sourcemap: { js: true },
+        sourcemapIgnoreList: [Function: isInNodeModules],
+        preTransformRequests: true,
+        createEnvironment: [Function: defaultCreateClientDevEnvironment],
+        recoverable: true,
+        moduleRunnerTransform: false
+      },
+      build: {
+        target: [ 'chrome107', 'edge107', 'firefox104', 'safari16' ],
+        polyfillModulePreload: true,
+        modulePreload: { polyfill: true },
+        outDir: 'dist',
+        assetsDir: 'assets',
+        assetsInlineLimit: 4096,
+        sourcemap: false,
+        terserOptions: {},
+        rollupOptions: { onwarn: [Function: onwarn] },
+        commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+        dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+        write: true,
+        emptyOutDir: null,
+        copyPublicDir: true,
+        license: false,
+        manifest: false,
+        lib: false,
+        ssrManifest: false,
+        ssrEmitAssets: false,
+        reportCompressedSize: true,
+        chunkSizeWarningLimit: 500,
+        watch: null,
+        cssCodeSplit: true,
+        minify: 'esbuild',
+        ssr: false,
+        emitAssets: true,
+        createEnvironment: [Function: createEnvironment],
+        cssTarget: [ 'chrome107', 'edge107', 'firefox104', 'safari16' ],
+        cssMinify: true
+      },
+      plugins: [
+        {
+          name: 'vite:optimized-deps',
+          applyToEnvironment: [Function: applyToEnvironment],
+          resolveId: [Function: resolveId],
+          load: [AsyncFunction: load]
+        },
+        {
+          name: 'vite:watch-package-data',
+          buildStart: [Function: buildStart],
+          buildEnd: [Function: buildEnd],
+          watchChange: [Function: watchChange]
+        },
+        {
+          name: 'vite:pre-alias',
+          applyToEnvironment: [Function: applyToEnvironment],
+          resolveId: [AsyncFunction: resolveId]
+        },
+        {
+          name: 'alias',
+          buildStart: [AsyncFunction: buildStart],
+          resolveId: [Function: resolveId]
+        },
+        {
+          name: 'vite:react-babel',
+          enforce: 'pre',
+          config: [Function: config],
+          configResolved: [Function: configResolved],
+          options: [Function: options],
+          transform: {
+            filter: {
+              id: {
+                include: /\.[tj]sx?(?:\?.*)?$/,
+                exclude: /\/node_modules\//
+              }
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:react-refresh',
+          enforce: 'pre',
+          config: [Function: config],
+          resolveId: {
+            filter: { id: /^\/@react\-refresh$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /^\/@react\-refresh$/ },
+            handler: [Function: handler]
+          },
+          transformIndexHtml: [Function: transformIndexHtml]
+        },
+        {
+          name: '@tailwindcss/vite:scan',
+          enforce: 'pre',
+          configureServer: [Function: configureServer],
+          configResolved: [AsyncFunction: configResolved]
+        },
+        {
+          name: '@tailwindcss/vite:generate:serve',
+          apply: 'serve',
+          enforce: 'pre',
+          transform: [AsyncFunction: transform]
+        },
+        {
+          name: 'vite:modulepreload-polyfill',
+          resolveId: {
+            filter: { id: /^vite\/modulepreload\-polyfill$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /^ vite\/modulepreload\-polyfill\.js$/ },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:resolve',
+          resolveId: {
+            filter: { id: { exclude: /^(?:\0|\/?virtual:)/ } },
+            handler: [AsyncFunction: handler]
+          },
+          load: {
+            filter: {
+              id: [
+                /^__vite\-browser\-external/,
+                /^__vite\-optional\-peer\-dep/
+              ]
+            },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:html-inline-proxy',
+          resolveId: {
+            filter: { id: /[?&]html-proxy\b/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /[?&]html-proxy\b/ },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:css',
+          buildStart: [Function: buildStart],
+          buildEnd: [Function: buildEnd],
+          load: {
+            filter: {
+              id: /\.(css|less|sass|scss|styl|stylus|pcss|postcss|sss)(?:$|\?)/
+            },
+            handler: [AsyncFunction: handler]
+          },
+          transform: {
+            filter: {
+              id: {
+                include: /\.(css|less|sass|scss|styl|stylus|pcss|postcss|sss)(?:$|\?)/,
+                exclude: [
+                  /[?&]commonjs-proxy/,
+                  /[?&](?:worker|sharedworker|raw|url)\b/
+                ]
+              }
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:esbuild',
+          configureServer: [Function: configureServer],
+          transform: [AsyncFunction: transform]
+        },
+        {
+          name: 'vite:json',
+          transform: {
+            filter: {
+              id: {
+                include: /\.json(?:$|\?)(?!commonjs-(?:proxy|external))/,
+                exclude: /[?&](?:worker|sharedworker|raw|url)\b/
+              }
+            },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:wasm-helper',
+          resolveId: {
+            filter: { id: /^ vite\/wasm\-helper\.js$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: {
+              id: [
+                /^ vite\/wasm\-helper\.js$/,
+                /(?<![?#].*)\.wasm\?init/
+              ]
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:worker',
+          buildStart: [Function: buildStart],
+          load: {
+            filter: { id: /(?:\?|&)(worker|sharedworker)(?:&|$)/ },
+            handler: [AsyncFunction: handler]
+          },
+          transform: {
+            filter: { id: /(?:\?|&)worker_file&type=(\w+)(?:&|$)/ },
+            handler: [AsyncFunction: handler]
+          },
+          renderChunk: [Function: renderChunk],
+          generateBundle: [Function: generateBundle],
+          watchChange: [Function: watchChange]
+        },
+        {
+          name: 'vite:asset',
+          perEnvironmentStartEndDuringDev: true,
+          buildStart: [Function: buildStart],
+          resolveId: { handler: [Function: handler] },
+          load: {
+            filter: { id: { exclude: /^\0/ } },
+            handler: [AsyncFunction: handler]
+          },
+          renderChunk: [Function: renderChunk],
+          generateBundle: [Function: generateBundle]
+        },
+        {
+          name: 'vite:react-virtual-preamble',
+          resolveId: {
+            order: 'pre',
+            filter: { id: /^@vitejs\/plugin\-react\/preamble$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /^ @vitejs\/plugin\-react\/preamble$/ },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:wasm-fallback',
+          load: { filter: { id: /\.wasm$/ }, handler: [Function: handler] }
+        },
+        {
+          name: 'vite:define',
+          transform: { handler: [AsyncFunction: handler] }
+        },
+        {
+          name: 'vite:css-post',
+          renderStart: [Function: renderStart],
+          transform: {
+            filter: {
+              id: {
+                include: /\.(css|less|sass|scss|styl|stylus|pcss|postcss|sss)(?:$|\?)/,
+                exclude: [
+                  /[?&]commonjs-proxy/,
+                  /[?&](?:worker|sharedworker|raw|url)\b/
+                ]
+              }
+            },
+            handler: [AsyncFunction: handler]
+          },
+          renderChunk: [AsyncFunction: renderChunk],
+          augmentChunkHash: [Function: augmentChunkHash],
+          generateBundle: [AsyncFunction: generateBundle]
+        },
+        {
+          name: 'vite:worker-import-meta-url',
+          applyToEnvironment: [Function: applyToEnvironment],
+          transform: {
+            filter: {
+              code: /new\s+(?:Worker|SharedWorker)\s*\(\s*new\s+URL.+?import\.meta\.url/s
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:asset-import-meta-url',
+          applyToEnvironment: [Function: applyToEnvironment],
+          transform: {
+            filter: {
+              id: {
+                exclude: [
+                  /^ vite\/preload\-helper\.js$/,
+                  /^C:\\Users\\hsteel01\\Box\\01 \- P Drive 2\\Alma\\Cataloging\\Snapicat\\snapicat\\apps\\client\\node_modules\\vite\\dist\\client\\client\.mjs$/
+                ]
+              },
+              code: /new\s+URL.+import\.meta\.url/s
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:dynamic-import-vars',
+          resolveId: {
+            filter: { id: /^ vite\/dynamic\-import\-helper\.js$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /^ vite\/dynamic\-import\-helper\.js$/ },
+            handler: [Function: handler]
+          },
+          transform: {
+            filter: {
+              id: {
+                exclude: /^C:\\Users\\hsteel01\\Box\\01 \- P Drive 2\\Alma\\Cataloging\\Snapicat\\snapicat\\apps\\client\\node_modules\\vite\\dist\\client\\client\.mjs$/
+              },
+              code: /\bimport\s*[(/]/
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:import-glob',
+          buildStart: [Function: buildStart],
+          transform: {
+            filter: { code: 'import.meta.glob' },
+            handler: [AsyncFunction: handler]
+          },
+          hotUpdate: [Function: hotUpdate]
+        },
+        {
+          name: 'vite:client-inject',
+          buildStart: [AsyncFunction: buildStart],
+          transform: [AsyncFunction: transform]
+        },
+        {
+          name: 'vite:css-analysis',
+          transform: {
+            filter: {
+              id: {
+                include: /\.(css|less|sass|scss|styl|stylus|pcss|postcss|sss)(?:$|\?)/,
+                exclude: [
+                  /[?&]commonjs-proxy/,
+                  /[?&](?:worker|sharedworker|raw|url)\b/
+                ]
+              }
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:import-analysis',
+          transform: [AsyncFunction: transform]
+        }
+      ]
+    },
+    ssr: {
+      define: undefined,
+      resolve: {
+        externalConditions: [ 'node', 'module-sync' ],
+        extensions: [
+          '.mjs',  '.js',
+          '.mts',  '.ts',
+          '.jsx',  '.tsx',
+          '.json'
+        ],
+        dedupe: [],
+        noExternal: [],
+        external: [],
+        preserveSymlinks: false,
+        alias: [
+          {
+            find: '@',
+            replacement: 'C:\\Users\\hsteel01\\Box\\01 - P Drive 2\\Alma\\Cataloging\\Snapicat\\snapicat\\apps\\client\\src'
+          },
+          {
+            find: /^\/?@vite\/env/,
+            replacement: '/@fs/C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/vite/dist/client/env.mjs'
+          },
+          {
+            find: /^\/?@vite\/client/,
+            replacement: '/@fs/C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/vite/dist/client/client.mjs'
+          }
+        ],
+        mainFields: [ 'module', 'jsnext:main', 'jsnext' ],
+        conditions: [ 'module', 'node', 'development|production' ],
+        builtins: [
+          '_http_agent',         '_http_client',        '_http_common',
+          '_http_incoming',      '_http_outgoing',      '_http_server',
+          '_stream_duplex',      '_stream_passthrough', '_stream_readable',
+          '_stream_transform',   '_stream_wrap',        '_stream_writable',
+          '_tls_common',         '_tls_wrap',           'assert',
+          'assert/strict',       'async_hooks',         'buffer',
+          'child_process',       'cluster',             'console',
+          'constants',           'crypto',              'dgram',
+          'diagnostics_channel', 'dns',                 'dns/promises',
+          'domain',              'events',              'fs',
+          'fs/promises',         'http',                'http2',
+          'https',               'inspector',           'inspector/promises',
+          'module',              'net',                 'os',
+          'path',                'path/posix',          'path/win32',
+          'perf_hooks',          'process',             'punycode',
+          'querystring',         'readline',            'readline/promises',
+          'repl',                'stream',              'stream/consumers',
+          'stream/promises',     'stream/web',          'string_decoder',
+          'sys',                 'timers',              'timers/promises',
+          'tls',                 'trace_events',        'tty',
+          'url',                 'util',                'util/types',
+          'v8',                  'vm',                  'wasi',
+          'worker_threads',      'zlib',                /^node:/,
+          /^bun:/
+        ]
+      },
+      keepProcessEnv: true,
+      consumer: 'server',
+      optimizeDeps: {
+        include: [],
+        exclude: [],
+        needsInterop: [],
+        extensions: [],
+        disabled: undefined,
+        holdUntilCrawlEnd: true,
+        force: false,
+        noDiscovery: true,
+        esbuildOptions: { preserveSymlinks: false }
+      },
+      dev: {
+        warmup: [],
+        sourcemap: { js: true },
+        sourcemapIgnoreList: [Function: isInNodeModules],
+        preTransformRequests: false,
+        createEnvironment: [Function: defaultCreateDevEnvironment],
+        recoverable: false,
+        moduleRunnerTransform: true
+      },
+      build: {
+        target: [ 'chrome107', 'edge107', 'firefox104', 'safari16' ],
+        polyfillModulePreload: true,
+        modulePreload: { polyfill: true },
+        outDir: 'dist',
+        assetsDir: 'assets',
+        assetsInlineLimit: 4096,
+        sourcemap: false,
+        terserOptions: {},
+        rollupOptions: { onwarn: [Function: onwarn] },
+        commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+        dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+        write: true,
+        emptyOutDir: null,
+        copyPublicDir: true,
+        license: false,
+        manifest: false,
+        lib: false,
+        ssrManifest: false,
+        ssrEmitAssets: false,
+        reportCompressedSize: true,
+        chunkSizeWarningLimit: 500,
+        watch: null,
+        cssCodeSplit: true,
+        minify: false,
+        ssr: true,
+        emitAssets: false,
+        createEnvironment: [Function: createEnvironment],
+        cssTarget: [ 'chrome107', 'edge107', 'firefox104', 'safari16' ],
+        cssMinify: 'esbuild'
+      },
+      plugins: [
+        {
+          name: 'vite:watch-package-data',
+          buildStart: [Function: buildStart],
+          buildEnd: [Function: buildEnd],
+          watchChange: [Function: watchChange]
+        },
+        {
+          name: 'alias',
+          buildStart: [AsyncFunction: buildStart],
+          resolveId: [Function: resolveId]
+        },
+        {
+          name: 'vite:react-babel',
+          enforce: 'pre',
+          config: [Function: config],
+          configResolved: [Function: configResolved],
+          options: [Function: options],
+          transform: {
+            filter: {
+              id: {
+                include: /\.[tj]sx?(?:\?.*)?$/,
+                exclude: /\/node_modules\//
+              }
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:react-refresh',
+          enforce: 'pre',
+          config: [Function: config],
+          resolveId: {
+            filter: { id: /^\/@react\-refresh$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /^\/@react\-refresh$/ },
+            handler: [Function: handler]
+          },
+          transformIndexHtml: [Function: transformIndexHtml]
+        },
+        {
+          name: '@tailwindcss/vite:scan',
+          enforce: 'pre',
+          configureServer: [Function: configureServer],
+          configResolved: [AsyncFunction: configResolved]
+        },
+        {
+          name: '@tailwindcss/vite:generate:serve',
+          apply: 'serve',
+          enforce: 'pre',
+          transform: [AsyncFunction: transform]
+        },
+        {
+          name: 'vite:modulepreload-polyfill',
+          resolveId: {
+            filter: { id: /^vite\/modulepreload\-polyfill$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /^ vite\/modulepreload\-polyfill\.js$/ },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:resolve',
+          resolveId: {
+            filter: { id: { exclude: /^(?:\0|\/?virtual:)/ } },
+            handler: [AsyncFunction: handler]
+          },
+          load: {
+            filter: {
+              id: [
+                /^__vite\-browser\-external/,
+                /^__vite\-optional\-peer\-dep/
+              ]
+            },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:html-inline-proxy',
+          resolveId: {
+            filter: { id: /[?&]html-proxy\b/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /[?&]html-proxy\b/ },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:css',
+          buildStart: [Function: buildStart],
+          buildEnd: [Function: buildEnd],
+          load: {
+            filter: {
+              id: /\.(css|less|sass|scss|styl|stylus|pcss|postcss|sss)(?:$|\?)/
+            },
+            handler: [AsyncFunction: handler]
+          },
+          transform: {
+            filter: {
+              id: {
+                include: /\.(css|less|sass|scss|styl|stylus|pcss|postcss|sss)(?:$|\?)/,
+                exclude: [
+                  /[?&]commonjs-proxy/,
+                  /[?&](?:worker|sharedworker|raw|url)\b/
+                ]
+              }
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:esbuild',
+          configureServer: [Function: configureServer],
+          transform: [AsyncFunction: transform]
+        },
+        {
+          name: 'vite:json',
+          transform: {
+            filter: {
+              id: {
+                include: /\.json(?:$|\?)(?!commonjs-(?:proxy|external))/,
+                exclude: /[?&](?:worker|sharedworker|raw|url)\b/
+              }
+            },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:wasm-helper',
+          resolveId: {
+            filter: { id: /^ vite\/wasm\-helper\.js$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: {
+              id: [
+                /^ vite\/wasm\-helper\.js$/,
+                /(?<![?#].*)\.wasm\?init/
+              ]
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:worker',
+          buildStart: [Function: buildStart],
+          load: {
+            filter: { id: /(?:\?|&)(worker|sharedworker)(?:&|$)/ },
+            handler: [AsyncFunction: handler]
+          },
+          transform: {
+            filter: { id: /(?:\?|&)worker_file&type=(\w+)(?:&|$)/ },
+            handler: [AsyncFunction: handler]
+          },
+          renderChunk: [Function: renderChunk],
+          generateBundle: [Function: generateBundle],
+          watchChange: [Function: watchChange]
+        },
+        {
+          name: 'vite:asset',
+          perEnvironmentStartEndDuringDev: true,
+          buildStart: [Function: buildStart],
+          resolveId: { handler: [Function: handler] },
+          load: {
+            filter: { id: { exclude: /^\0/ } },
+            handler: [AsyncFunction: handler]
+          },
+          renderChunk: [Function: renderChunk],
+          generateBundle: [Function: generateBundle]
+        },
+        {
+          name: 'vite:react-virtual-preamble',
+          resolveId: {
+            order: 'pre',
+            filter: { id: /^@vitejs\/plugin\-react\/preamble$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /^ @vitejs\/plugin\-react\/preamble$/ },
+            handler: [Function: handler]
+          }
+        },
+        {
+          name: 'vite:wasm-fallback',
+          load: { filter: { id: /\.wasm$/ }, handler: [Function: handler] }
+        },
+        {
+          name: 'vite:define',
+          transform: { handler: [AsyncFunction: handler] }
+        },
+        {
+          name: 'vite:css-post',
+          renderStart: [Function: renderStart],
+          transform: {
+            filter: {
+              id: {
+                include: /\.(css|less|sass|scss|styl|stylus|pcss|postcss|sss)(?:$|\?)/,
+                exclude: [
+                  /[?&]commonjs-proxy/,
+                  /[?&](?:worker|sharedworker|raw|url)\b/
+                ]
+              }
+            },
+            handler: [AsyncFunction: handler]
+          },
+          renderChunk: [AsyncFunction: renderChunk],
+          augmentChunkHash: [Function: augmentChunkHash],
+          generateBundle: [AsyncFunction: generateBundle]
+        },
+        {
+          name: 'vite:dynamic-import-vars',
+          resolveId: {
+            filter: { id: /^ vite\/dynamic\-import\-helper\.js$/ },
+            handler: [Function: handler]
+          },
+          load: {
+            filter: { id: /^ vite\/dynamic\-import\-helper\.js$/ },
+            handler: [Function: handler]
+          },
+          transform: {
+            filter: {
+              id: {
+                exclude: /^C:\\Users\\hsteel01\\Box\\01 \- P Drive 2\\Alma\\Cataloging\\Snapicat\\snapicat\\apps\\client\\node_modules\\vite\\dist\\client\\client\.mjs$/
+              },
+              code: /\bimport\s*[(/]/
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:import-glob',
+          buildStart: [Function: buildStart],
+          transform: {
+            filter: { code: 'import.meta.glob' },
+            handler: [AsyncFunction: handler]
+          },
+          hotUpdate: [Function: hotUpdate]
+        },
+        {
+          name: 'vite:client-inject',
+          buildStart: [AsyncFunction: buildStart],
+          transform: [AsyncFunction: transform]
+        },
+        {
+          name: 'vite:css-analysis',
+          transform: {
+            filter: {
+              id: {
+                include: /\.(css|less|sass|scss|styl|stylus|pcss|postcss|sss)(?:$|\?)/,
+                exclude: [
+                  /[?&]commonjs-proxy/,
+                  /[?&](?:worker|sharedworker|raw|url)\b/
+                ]
+              }
+            },
+            handler: [AsyncFunction: handler]
+          }
+        },
+        {
+          name: 'vite:import-analysis',
+          transform: [AsyncFunction: transform]
+        }
+      ]
+    }
+  },
+  configFile: 'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/vite.config.js',
+  configFileDependencies: [
+    'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/vite.config.js'
+  ],
+  inlineConfig: {
+    root: undefined,
+    base: undefined,
+    mode: undefined,
+    configFile: undefined,
+    configLoader: undefined,
+    logLevel: undefined,
+    clearScreen: undefined,
+    server: { host: undefined },
+    forceOptimizeDeps: undefined
+  },
+  root: 'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client',
+  base: '/',
+  decodedBase: '/',
+  rawBase: '/',
+  publicDir: 'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/public',
+  cacheDir: 'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite',
+  command: 'serve',
+  mode: 'development',
+  isWorker: false,
+  mainConfig: null,
+  bundleChain: [],
+  isProduction: false,
+  css: {
+    transformer: 'postcss',
+    preprocessorMaxWorkers: true,
+    devSourcemap: false
+  },
+  json: { namedExports: true, stringify: 'auto' },
+  builder: undefined,
+  preview: {
+    port: 4173,
+    strictPort: false,
+    host: undefined,
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {}
+  },
+  envDir: 'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client',
+  env: {
+    VITE_APP_TITLE: 'My OCLC App',
+    VITE_APP_NAME: 'My Library',
+    VITE_API_BASE_URL: '/api',
+    VITE_BATCH_SIZE: '1000',
+    VITE_AZURE_FE_APP_TENANT_ID: '',
+    VITE_AZURE_FE_APP_CLIENT_ID: '',
+    VITE_AZURE_BE_APP_CLIENT_ID: '',
+    BASE_URL: '/',
+    MODE: 'development',
+    DEV: true,
+    PROD: false
+  },
+  assetsInclude: [Function: assetsInclude],
+  logger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  packageCache: Map(1) {
+    'fnpd_C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client' => {
+      dir: 'C:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client',
+      data: {
+        name: 'snAPIcat-client',
+        private: true,
+        version: '0.0.0',
+        type: 'module',
+        scripts: {
+          dev: 'vite',
+          build: 'tsc -b && vite build',
+          preview: 'vite preview',
+          lint: 'biome lint --write .',
+          format: 'biome format --write .',
+          check: 'biome check --write --unsafe .',
+          ci: 'biome ci .',
+          prepare: 'husky'
+        },
+        dependencies: {
+          '@radix-ui/react-accordion': '1.2.12',
+          '@radix-ui/react-avatar': '1.1.11',
+          '@radix-ui/react-checkbox': '1.3.3',
+          '@radix-ui/react-dialog': '1.1.15',
+          '@radix-ui/react-dropdown-menu': '2.1.16',
+          '@radix-ui/react-label': '2.1.8',
+          '@radix-ui/react-scroll-area': '1.2.10',
+          '@radix-ui/react-select': '2.2.6',
+          '@radix-ui/react-slot': '1.2.4',
+          '@radix-ui/react-switch': '1.2.6',
+          '@radix-ui/react-tabs': '1.1.13',
+          '@radix-ui/react-toast': '1.2.15',
+          '@radix-ui/react-tooltip': '1.2.8',
+          '@tailwindcss/vite': '4.1.17',
+          '@tanstack/react-query': '5.90.12',
+          '@tanstack/react-table': '8.21.3',
+          axios: '1.13.2',
+          'class-variance-authority': '0.7.1',
+          clsx: '2.1.1',
+          dexie: '4.2.1',
+          'file-saver': '2.0.5',
+          'jwt-decode': '4.0.0',
+          'lucide-react': '0.556.0',
+          'next-themes': '0.4.6',
+          react: '19.2.1',
+          'react-dom': '19.2.1',
+          'react-dropzone': '14.3.8',
+          'react-error-boundary': '6.0.0',
+          'react-router-dom': '7.10.1',
+          sonner: '2.0.7',
+          'tailwind-merge': '3.4.0',
+          tailwindcss: '4.1.17',
+          xlsx: '0.18.5'
+        },
+        devDependencies: {
+          '@biomejs/biome': '1.9.4',
+          '@types/file-saver': '2.0.7',
+          '@types/node': '24.10.1',
+          '@types/react': '19.2.7',
+          '@types/react-dom': '19.2.3',
+          '@vitejs/plugin-react': '5.1.2',
+          autoprefixer: '10.4.22',
+          globals: '16.5.0',
+          husky: '9.1.7',
+          postcss: '8.5.6',
+          'tw-animate-css': '1.4.0',
+          typescript: '5.9.3',
+          vite: '7.2.7'
+        },
+        packageManager: 'yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e'
+      },
+      hasSideEffects: [Function: hasSideEffects],
+      setResolvedCache: [Function: setResolvedCache],
+      getResolvedCache: [Function: getResolvedCache]
+    },
+    set: [Function (anonymous)]
+  },
+  worker: { format: 'iife', plugins: '() => plugins', rollupOptions: {} },
+  appType: 'spa',
+  experimental: {
+    importGlobRestoreExtension: false,
+    renderBuiltUrl: undefined,
+    hmrPartialAccept: false
+  },
+  future: undefined,
+  ssr: {
+    target: 'node',
+    optimizeDeps: {
+      esbuildOptions: { preserveSymlinks: false },
+      include: [],
+      exclude: [],
+      needsInterop: [],
+      extensions: [],
+      holdUntilCrawlEnd: true,
+      force: false,
+      noDiscovery: true
+    },
+    external: [],
+    noExternal: [],
+    resolve: {
+      conditions: [ 'module', 'node', 'development|production' ],
+      externalConditions: [ 'node', 'module-sync' ]
+    }
+  },
+  dev: {
+    warmup: [],
+    sourcemap: { js: true },
+    sourcemapIgnoreList: [Function: isInNodeModules],
+    preTransformRequests: false,
+    createEnvironment: [Function: defaultCreateDevEnvironment],
+    recoverable: false,
+    moduleRunnerTransform: false
+  },
+  webSocketToken: 'sXllb2BOEi3N',
+  getSortedPlugins: [Function: getSortedPlugins],
+  getSortedPluginHooks: [Function: getSortedPluginHooks],
+  createResolver: [Function: createResolver],
+  fsDenyGlob: [Function: arrayMatcher],
+  safeModulePaths: Set(0) {},
+  Symbol(vite:resolved-config): true
+}
+2026-09-26T22:24:12.758Z vite:hmr [file change] [2mvite-debug.txt[22m
+2026-09-26T22:24:12.758Z vite:hmr (client) [no modules matched] [2mvite-debug.txt[22m
+2026-09-26T22:24:12.758Z vite:hmr (ssr) [no modules matched] [2mvite-debug.txt[22m
+2026-09-26T22:24:12.760Z vite:deps (client) Hash is consistent. Skipping. Use --force to override.
+
+  [32m[1mVITE[22m v7.2.7[39m  [2mready in [0m[1m467[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+2026-09-26T22:24:12.976Z vite:html-fallback Rewriting GET / to /index.html
+2026-09-26T22:24:12.991Z vite:time [33m16.86ms[39m [2m/index.html[22m
+2026-09-26T22:24:12.992Z vite:resolve [32m3.58ms[39m [36m/src/main.tsx[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/main.tsx[22m
+2026-09-26T22:24:12.995Z vite:load [32m1.73ms[39m [fs] [2m/src/main.tsx[22m
+2026-09-26T22:24:13.347Z vite:resolve [32m0.28ms[39m [36m/@vite/client[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/vite/dist/client/client.mjs[22m
+2026-09-26T22:24:13.352Z vite:load [32m1.61ms[39m [plugin] [2m/@react-refresh[22m
+2026-09-26T22:24:13.355Z vite:import-analysis [32m0.82ms[39m [2m[0 imports rewritten] [2m/@react-refresh[22m[2m[22m
+2026-09-26T22:24:13.355Z vite:transform [32m3.59ms[39m [2m/@react-refresh[22m
+2026-09-26T22:24:13.360Z vite:time [33m10.18ms[39m [2m/@react-refresh[22m
+2026-09-26T22:24:13.364Z vite:load [33m16.60ms[39m [fs] [2m/@vite/client[22m
+2026-09-26T22:24:13.371Z vite:resolve [32m0.12ms[39m [36m@vite/env[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/vite/dist/client/env.mjs[22m
+2026-09-26T22:24:13.372Z vite:import-analysis [32m1.24ms[39m [2m[1 imports rewritten] [2mnode_modules/vite/dist/client/client.mjs[22m[2m[22m
+2026-09-26T22:24:13.372Z vite:transform [32m8.04ms[39m [2m/@vite/client[22m
+2026-09-26T22:24:13.376Z vite:time [33m29.45ms[39m [2m/@vite/client[22m
+2026-09-26T22:24:13.382Z vite:load [33m10.37ms[39m [fs] [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-09-26T22:24:13.382Z vite:import-analysis [32m0.04ms[39m [2m[no imports] [2mnode_modules/vite/dist/client/env.mjs[22m[2m[22m
+2026-09-26T22:24:13.382Z vite:transform [32m0.24ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-09-26T22:24:13.383Z vite:time [32m0.95ms[39m [2m/node_modules/vite/dist/client/env.mjs[22m
+2026-09-26T22:24:13.389Z vite:resolve [32m1.39ms[39m [36m./index.css[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/index.css[22m
+2026-09-26T22:24:13.389Z vite:resolve [32m1.57ms[39m [36m./App.tsx[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/App.tsx[22m
+2026-09-26T22:24:13.389Z vite:resolve [32m1.62ms[39m [36mreact/jsx-dev-runtime[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.389Z vite:resolve [32m1.63ms[39m [36mreact-dom/client[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/react-dom_client.js?v=7c018f19[22m
+2026-09-26T22:24:13.390Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.390Z vite:import-analysis /node_modules/.vite/deps/react-dom_client.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.390Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/react_jsx-dev-runtime.js[39m
+2026-09-26T22:24:13.391Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/react-dom_client.js[39m
+2026-09-26T22:24:13.391Z vite:import-analysis [32m3.31ms[39m [2m[4 imports rewritten] [2msrc/main.tsx[22m[2m[22m
+2026-09-26T22:24:13.393Z vite:transform [31m397.49ms[39m [2m/src/main.tsx[22m
+2026-09-26T22:24:13.394Z vite:time [33m44.01ms[39m [2m/src/main.tsx[22m
+2026-09-26T22:24:13.394Z vite:load [32m3.94ms[39m [plugin] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.395Z vite:resolve [32m0.19ms[39m [36m./chunk-JYVDFSE2.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.395Z vite:resolve [32m0.23ms[39m [36m./chunk-G3PMV62Z.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.395Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-JYVDFSE2.js[39m
+2026-09-26T22:24:13.395Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-G3PMV62Z.js[39m
+2026-09-26T22:24:13.395Z vite:import-analysis [32m0.82ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.396Z vite:transform [32m1.02ms[39m [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.396Z vite:load [32m5.24ms[39m [fs] [2m/src/index.css[22m
+2026-09-26T22:24:13.398Z vite:resolve [32m0.04ms[39m [36mtailwindcss[39m -> [2mnull[22m
+2026-09-26T22:24:13.398Z vite:resolve [32m0.11ms[39m [36mtw-animate-css[39m -> [2mnull[22m
+2026-09-26T22:24:13.405Z vite:load [33m14.62ms[39m [fs] [2m/src/App.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.59ms[39m [36m@tanstack/react-query[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@tanstack_react-query.js?v=7c018f19[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.70ms[39m [36mreact-router-dom[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.51ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ProtectedRoute[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ProtectedRoute.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.52ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/sonner[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/sonner.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.55ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/toaster[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/toaster.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.55ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/tooltip[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/tooltip.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.56ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/context/authContext[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/context/authContext.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.57ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/hooks/use-theme[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/hooks/use-theme.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.58ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/pages/Home[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/pages/Home.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.59ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/pages/Login[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/pages/Login.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.61ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/pages/NotFound[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/pages/NotFound.tsx[22m
+2026-09-26T22:24:13.422Z vite:resolve [32m2.62ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/pages/Processed[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/pages/Processed.tsx[22m
+2026-09-26T22:24:13.422Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.422Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.423Z vite:resolve [32m3.01ms[39m [36m@/components/ProtectedRoute[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ProtectedRoute.tsx[22m
+2026-09-26T22:24:13.423Z vite:resolve [32m3.04ms[39m [36m@/components/ui/sonner[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/sonner.tsx[22m
+2026-09-26T22:24:13.423Z vite:resolve [32m3.05ms[39m [36m@/components/ui/toaster[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/toaster.tsx[22m
+2026-09-26T22:24:13.423Z vite:resolve [32m3.07ms[39m [36m@/components/ui/tooltip[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/tooltip.tsx[22m
+2026-09-26T22:24:13.423Z vite:resolve [32m3.08ms[39m [36m@/context/authContext[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/context/authContext.tsx[22m
+2026-09-26T22:24:13.423Z vite:resolve [32m3.09ms[39m [36m@/hooks/use-theme[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/hooks/use-theme.tsx[22m
+2026-09-26T22:24:13.423Z vite:resolve [32m3.10ms[39m [36m@/pages/Home[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/pages/Home.tsx[22m
+2026-09-26T22:24:13.423Z vite:resolve [32m3.11ms[39m [36m@/pages/Login[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/pages/Login.tsx[22m
+2026-09-26T22:24:13.423Z vite:resolve [32m3.12ms[39m [36m@/pages/NotFound[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/pages/NotFound.tsx[22m
+2026-09-26T22:24:13.423Z vite:resolve [32m3.14ms[39m [36m@/pages/Processed[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/pages/Processed.tsx[22m
+2026-09-26T22:24:13.423Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.424Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@tanstack_react-query.js[39m
+2026-09-26T22:24:13.424Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/react-router-dom.js[39m
+2026-09-26T22:24:13.424Z vite:hmr [self-accepts] [2msrc/App.tsx[22m
+2026-09-26T22:24:13.425Z vite:import-analysis [32m5.46ms[39m [2m[14 imports rewritten] [2msrc/App.tsx[22m[2m[22m
+2026-09-26T22:24:13.426Z vite:transform [33m21.13ms[39m [2m/src/App.tsx[22m
+2026-09-26T22:24:13.427Z vite:time [32m8.45ms[39m [2m/src/App.tsx[22m
+2026-09-26T22:24:13.428Z vite:load [33m37.44ms[39m [plugin] [2m/node_modules/.vite/deps/react-dom_client.js?v=7c018f19[22m
+2026-09-26T22:24:13.437Z vite:resolve [32m0.18ms[39m [36m./chunk-ZO4MPYSA.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.437Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-ZO4MPYSA.js[39m
+2026-09-26T22:24:13.437Z vite:import-analysis [32m6.05ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/react-dom_client.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.437Z vite:transform [32m9.24ms[39m [2m/node_modules/.vite/deps/react-dom_client.js?v=7c018f19[22m
+2026-09-26T22:24:13.440Z vite:load [33m44.29ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.441Z vite:import-analysis [32m0.65ms[39m [2m[1 imports rewritten] [2mnode_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.441Z vite:transform [32m0.93ms[39m [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.443Z vite:load [33m47.46ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.443Z vite:import-analysis [32m0.04ms[39m [2m[no imports] [2mnode_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.443Z vite:transform [32m0.18ms[39m[2m [skipped] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.534Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-09-26T22:24:13.534Z vite:import-analysis [32m0.51ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-09-26T22:24:13.534Z vite:transform [31m138.83ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:13.535Z vite:time [31m116.33ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:13.537Z vite:load [31m112.25ms[39m [fs] [2m/src/components/ui/toaster.tsx[22m
+2026-09-26T22:24:13.544Z vite:load [31m119.32ms[39m [fs] [2m/src/components/ProtectedRoute.tsx[22m
+2026-09-26T22:24:13.549Z vite:load [31m124.83ms[39m [fs] [2m/src/components/ui/sonner.tsx[22m
+2026-09-26T22:24:13.553Z vite:load [31m128.16ms[39m [fs] [2m/src/context/authContext.tsx[22m
+2026-09-26T22:24:13.565Z vite:load [31m140.68ms[39m [fs] [2m/src/hooks/use-theme.tsx[22m
+2026-09-26T22:24:13.569Z vite:load [31m145.33ms[39m [plugin] [2m/node_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m
+2026-09-26T22:24:13.578Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.579Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.579Z vite:hmr [detected api usage] [2mnode_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m
+2026-09-26T22:24:13.579Z vite:import-analysis [32m2.80ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.579Z vite:transform [32m9.83ms[39m [2m/node_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m
+2026-09-26T22:24:13.580Z vite:load [31m155.17ms[39m [fs] [2m/src/pages/Home.tsx[22m
+2026-09-26T22:24:13.631Z vite:load [31m206.62ms[39m [fs] [2m/src/components/ui/tooltip.tsx[22m
+2026-09-26T22:24:13.634Z vite:load [31m210.77ms[39m [plugin] [2m/node_modules/.vite/deps/@tanstack_react-query.js?v=7c018f19[22m
+2026-09-26T22:24:13.635Z vite:resolve [32m0.13ms[39m [36m./chunk-ZTZZFBWU.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.635Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.635Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.635Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-ZTZZFBWU.js[39m
+2026-09-26T22:24:13.636Z vite:import-analysis [32m1.06ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/@tanstack_react-query.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.636Z vite:transform [32m1.35ms[39m [2m/node_modules/.vite/deps/@tanstack_react-query.js?v=7c018f19[22m
+2026-09-26T22:24:13.636Z vite:load [31m211.11ms[39m [fs] [2m/src/pages/NotFound.tsx[22m
+2026-09-26T22:24:13.645Z vite:load [31m220.81ms[39m [fs] [2m/src/pages/Login.tsx[22m
+2026-09-26T22:24:13.649Z vite:load [31m224.50ms[39m [fs] [2m/src/pages/Processed.tsx[22m
+2026-09-26T22:24:13.656Z vite:load [31m218.82ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.656Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.656Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.656Z vite:import-analysis [32m0.29ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.656Z vite:transform [32m0.44ms[39m [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.662Z vite:hmr [file change] [2mvite-debug.txt[22m
+[2m6:24:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+2026-09-26T22:24:13.752Z vite:hmr (ssr) [no modules matched] [2mvite-debug.txt[22m
+2026-09-26T22:24:13.757Z vite:hmr [file change] [2mvite-debug.txt[22m
+[2m6:24:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+2026-09-26T22:24:13.758Z vite:hmr (ssr) [no modules matched] [2mvite-debug.txt[22m
+2026-09-26T22:24:13.761Z vite:resolve [32m1.78ms[39m [36m./Footer[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/Footer.tsx[22m
+2026-09-26T22:24:13.761Z vite:resolve [32m1.89ms[39m [36m./Navbar[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/Navbar.tsx[22m
+2026-09-26T22:24:13.761Z vite:resolve [32m1.82ms[39m [36m@radix-ui/react-tooltip[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=7c018f19[22m
+2026-09-26T22:24:13.761Z vite:resolve [32m1.85ms[39m [36mreact[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:13.761Z vite:resolve [32m1.78ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/lib/utils[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/utils.ts[22m
+2026-09-26T22:24:13.761Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.761Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.761Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.761Z vite:resolve [32m2.22ms[39m [36m@/lib/utils[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/utils.ts[22m
+2026-09-26T22:24:13.761Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.761Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m
+2026-09-26T22:24:13.761Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.762Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-tooltip.js[39m
+2026-09-26T22:24:13.762Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/react.js[39m
+2026-09-26T22:24:13.762Z vite:hmr [self-accepts] [2msrc/components/ProtectedRoute.tsx[22m
+2026-09-26T22:24:13.763Z vite:hmr [self-accepts] [2msrc/components/ui/tooltip.tsx[22m
+2026-09-26T22:24:13.763Z vite:import-analysis [32m4.15ms[39m [2m[6 imports rewritten] [2msrc/components/ProtectedRoute.tsx[22m[2m[22m
+2026-09-26T22:24:13.763Z vite:import-analysis [32m4.27ms[39m [2m[5 imports rewritten] [2msrc/components/ui/tooltip.tsx[22m[2m[22m
+2026-09-26T22:24:13.764Z vite:transform [31m219.46ms[39m [2m/src/components/ProtectedRoute.tsx[22m
+2026-09-26T22:24:13.764Z vite:transform [31m132.85ms[39m [2m/src/components/ui/tooltip.tsx[22m
+2026-09-26T22:24:13.764Z vite:time [31m323.26ms[39m [2m/src/components/ProtectedRoute.tsx[22m
+2026-09-26T22:24:13.765Z vite:time [31m322.25ms[39m [2m/src/components/ui/tooltip.tsx[22m
+2026-09-26T22:24:13.766Z vite:load [31m131.00ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.767Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.767Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.767Z vite:import-analysis [32m0.46ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.767Z vite:transform [32m0.67ms[39m [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.771Z vite:resolve [32m1.94ms[39m [36mlucide-react[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/lucide-react.js?v=7c018f19[22m
+2026-09-26T22:24:13.771Z vite:resolve [32m1.97ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/toast[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/toast.tsx[22m
+2026-09-26T22:24:13.771Z vite:resolve [32m1.98ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/hooks/use-toast[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/hooks/use-toast.ts[22m
+2026-09-26T22:24:13.771Z vite:resolve [32m2.01ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/lib/database[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/database.ts[22m
+2026-09-26T22:24:13.772Z vite:resolve [32m2.03ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/button[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/button.tsx[22m
+2026-09-26T22:24:13.772Z vite:resolve [32m2.05ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/card[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/card.tsx[22m
+2026-09-26T22:24:13.772Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.772Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.772Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.772Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.772Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.772Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.772Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.772Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.772Z vite:resolve [32m2.74ms[39m [36m@/components/ui/toast[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/toast.tsx[22m
+2026-09-26T22:24:13.772Z vite:resolve [32m2.76ms[39m [36m@/hooks/use-toast[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/hooks/use-toast.ts[22m
+2026-09-26T22:24:13.772Z vite:resolve [32m2.77ms[39m [36m@/lib/database[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/database.ts[22m
+2026-09-26T22:24:13.772Z vite:resolve [32m2.79ms[39m [36m@/components/ui/button[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/button.tsx[22m
+2026-09-26T22:24:13.772Z vite:resolve [32m2.80ms[39m [36m@/components/ui/card[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/card.tsx[22m
+2026-09-26T22:24:13.772Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.772Z vite:hmr [self-accepts] [2msrc/hooks/use-theme.tsx[22m
+2026-09-26T22:24:13.772Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m
+2026-09-26T22:24:13.773Z vite:import-analysis [32m3.77ms[39m [2m[3 imports rewritten] [2msrc/hooks/use-theme.tsx[22m[2m[22m
+2026-09-26T22:24:13.773Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/lucide-react.js[39m
+2026-09-26T22:24:13.773Z vite:transform [31m207.72ms[39m [2m/src/hooks/use-theme.tsx[22m
+2026-09-26T22:24:13.774Z vite:hmr [self-accepts] [2msrc/components/ui/toaster.tsx[22m
+2026-09-26T22:24:13.774Z vite:hmr [self-accepts] [2msrc/context/authContext.tsx[22m
+2026-09-26T22:24:13.774Z vite:hmr [self-accepts] [2msrc/pages/Login.tsx[22m
+2026-09-26T22:24:13.774Z vite:time [31m128.80ms[39m [2m/src/hooks/use-theme.tsx[22m
+2026-09-26T22:24:13.775Z vite:import-analysis [32m5.62ms[39m [2m[4 imports rewritten] [2msrc/components/ui/toaster.tsx[22m[2m[22m
+2026-09-26T22:24:13.775Z vite:import-analysis [32m5.72ms[39m [2m[4 imports rewritten] [2msrc/context/authContext.tsx[22m[2m[22m
+2026-09-26T22:24:13.775Z vite:import-analysis [32m5.79ms[39m [2m[8 imports rewritten] [2msrc/pages/Login.tsx[22m[2m[22m
+2026-09-26T22:24:13.777Z vite:transform [31m239.78ms[39m [2m/src/components/ui/toaster.tsx[22m
+2026-09-26T22:24:13.777Z vite:transform [31m224.07ms[39m [2m/src/context/authContext.tsx[22m
+2026-09-26T22:24:13.777Z vite:transform [31m131.40ms[39m [2m/src/pages/Login.tsx[22m
+2026-09-26T22:24:13.778Z vite:time [31m335.06ms[39m [2m/src/components/ui/toaster.tsx[22m
+2026-09-26T22:24:13.778Z vite:time [31m335.19ms[39m [2m/src/context/authContext.tsx[22m
+2026-09-26T22:24:13.778Z vite:time [32m9.96ms[39m [2m/src/pages/Login.tsx[22m
+2026-09-26T22:24:13.782Z vite:resolve [32m2.59ms[39m [36mnext-themes[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/next-themes.js?v=7c018f19[22m
+2026-09-26T22:24:13.782Z vite:resolve [32m2.68ms[39m [36msonner[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/sonner.js?v=7c018f19[22m
+2026-09-26T22:24:13.782Z vite:resolve [32m2.50ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ProcessedDataTable[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ProcessedDataTable.tsx[22m
+2026-09-26T22:24:13.782Z vite:resolve [32m2.51ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/lib/excel[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/excel.ts[22m
+2026-09-26T22:24:13.782Z vite:resolve [32m2.52ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/lib/mutations/use-generate-xml[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/mutations/use-generate-xml.ts[22m
+2026-09-26T22:24:13.782Z vite:resolve [32m2.54ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/lib/session-storage[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/session-storage.ts[22m
+2026-09-26T22:24:13.782Z vite:resolve [32m2.55ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/lib/sort-columns[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/sort-columns.ts[22m
+2026-09-26T22:24:13.782Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.782Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.783Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.783Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.783Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.783Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.783Z vite:resolve [32m3.01ms[39m [36m@/components/ProcessedDataTable[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ProcessedDataTable.tsx[22m
+2026-09-26T22:24:13.783Z vite:resolve [32m3.04ms[39m [36m@/lib/excel[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/excel.ts[22m
+2026-09-26T22:24:13.783Z vite:resolve [32m3.05ms[39m [36m@/lib/mutations/use-generate-xml[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/mutations/use-generate-xml.ts[22m
+2026-09-26T22:24:13.783Z vite:resolve [32m3.06ms[39m [36m@/lib/session-storage[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/session-storage.ts[22m
+2026-09-26T22:24:13.783Z vite:resolve [32m3.07ms[39m [36m@/lib/sort-columns[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/sort-columns.ts[22m
+2026-09-26T22:24:13.783Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.783Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m
+2026-09-26T22:24:13.783Z vite:hmr [self-accepts] [2msrc/pages/NotFound.tsx[22m
+2026-09-26T22:24:13.783Z vite:hmr [self-accepts] [2msrc/components/ui/sonner.tsx[22m
+2026-09-26T22:24:13.783Z vite:import-analysis [32m4.17ms[39m [2m[4 imports rewritten] [2msrc/pages/NotFound.tsx[22m[2m[22m
+2026-09-26T22:24:13.783Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/next-themes.js[39m
+2026-09-26T22:24:13.783Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/sonner.js[39m
+2026-09-26T22:24:13.783Z vite:import-analysis [32m4.29ms[39m [2m[4 imports rewritten] [2msrc/components/ui/sonner.tsx[22m[2m[22m
+2026-09-26T22:24:13.784Z vite:transform [31m147.92ms[39m [2m/src/pages/NotFound.tsx[22m
+2026-09-26T22:24:13.784Z vite:transform [31m234.62ms[39m [2m/src/components/ui/sonner.tsx[22m
+2026-09-26T22:24:13.785Z vite:hmr [self-accepts] [2msrc/pages/Processed.tsx[22m
+2026-09-26T22:24:13.785Z vite:time [31m343.08ms[39m [2m/src/components/ui/sonner.tsx[22m
+2026-09-26T22:24:13.785Z vite:import-analysis [32m5.84ms[39m [2m[14 imports rewritten] [2msrc/pages/Processed.tsx[22m[2m[22m
+2026-09-26T22:24:13.786Z vite:transform [31m136.26ms[39m [2m/src/pages/Processed.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m2.41ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/BookDataTable[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/BookDataTable.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m2.48ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ExcelUpload[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ExcelUpload.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m2.50ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/input[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/input.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m2.51ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/scroll-area[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/scroll-area.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m2.53ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/select[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/select.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m2.54ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/lib/mutations/use-search-books[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/mutations/use-search-books.ts[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m2.55ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/lib/search-config[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/search-config.ts[22m
+2026-09-26T22:24:13.790Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.790Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.790Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.790Z vite:resolve [32m2.95ms[39m [36m@/components/BookDataTable[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/BookDataTable.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m2.97ms[39m [36m@/components/ExcelUpload[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ExcelUpload.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m2.99ms[39m [36m@/components/ui/input[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/input.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m3.00ms[39m [36m@/components/ui/scroll-area[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/scroll-area.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m3.01ms[39m [36m@/components/ui/select[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/select.tsx[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m3.03ms[39m [36m@/lib/mutations/use-search-books[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/mutations/use-search-books.ts[22m
+2026-09-26T22:24:13.790Z vite:resolve [32m3.04ms[39m [36m@/lib/search-config[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/search-config.ts[22m
+2026-09-26T22:24:13.790Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.790Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m
+2026-09-26T22:24:13.791Z vite:hmr [self-accepts] [2msrc/pages/Home.tsx[22m
+2026-09-26T22:24:13.791Z vite:import-analysis [32m4.45ms[39m [2m[19 imports rewritten] [2msrc/pages/Home.tsx[22m[2m[22m
+2026-09-26T22:24:13.793Z vite:transform [31m212.91ms[39m [2m/src/pages/Home.tsx[22m
+2026-09-26T22:24:13.794Z vite:time [33m25.61ms[39m [2m/src/pages/Home.tsx[22m
+2026-09-26T22:24:13.795Z vite:cache [304] [2m/src/pages/NotFound.tsx[22m
+2026-09-26T22:24:13.795Z vite:time [32m0.17ms[39m [2m/src/pages/NotFound.tsx[22m
+2026-09-26T22:24:13.796Z vite:cache [304] [2m/src/pages/Processed.tsx[22m
+2026-09-26T22:24:13.796Z vite:time [32m0.11ms[39m [2m/src/pages/Processed.tsx[22m
+2026-09-26T22:24:13.798Z vite:load [33m36.21ms[39m [fs] [2m/src/components/Navbar.tsx[22m
+2026-09-26T22:24:13.803Z vite:load [33m41.52ms[39m [fs] [2m/src/components/Footer.tsx[22m
+2026-09-26T22:24:13.805Z vite:load [33m42.35ms[39m [fs] [2m/src/lib/utils.ts[22m
+2026-09-26T22:24:13.805Z vite:load [33m43.30ms[39m [plugin] [2m/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:13.806Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.806Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.806Z vite:import-analysis [32m0.26ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/react.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.806Z vite:transform [32m0.35ms[39m [2m/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:13.806Z vite:load [33m43.96ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.18ms[39m [36m./chunk-T22NG25K.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-T22NG25K.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.24ms[39m [36m./chunk-KYYT4GRY.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-KYYT4GRY.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.27ms[39m [36m./chunk-KKFCISPU.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-KKFCISPU.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.29ms[39m [36m./chunk-RN4V4E7F.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-RN4V4E7F.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.31ms[39m [36m./chunk-SQZNE2E2.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-SQZNE2E2.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.32ms[39m [36m./chunk-GUL5SRRD.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.33ms[39m [36m./chunk-JX33HBUH.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.34ms[39m [36m./chunk-VMLKBH7E.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-VMLKBH7E.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.35ms[39m [36m./chunk-4ELFZULD.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.37ms[39m [36m./chunk-DAECNDN6.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:resolve [32m0.42ms[39m [36m./chunk-J2IBHCDB.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.807Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-T22NG25K.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-KYYT4GRY.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-KKFCISPU.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-RN4V4E7F.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-SQZNE2E2.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-GUL5SRRD.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-JX33HBUH.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-VMLKBH7E.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-4ELFZULD.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-DAECNDN6.js[39m
+2026-09-26T22:24:13.808Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-J2IBHCDB.js[39m
+2026-09-26T22:24:13.808Z vite:import-analysis [32m1.90ms[39m [2m[15 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-tooltip.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.808Z vite:transform [32m2.06ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=7c018f19[22m
+2026-09-26T22:24:13.809Z vite:load [33m34.60ms[39m [fs] [2m/src/hooks/use-toast.ts[22m
+2026-09-26T22:24:13.810Z vite:load [33m35.07ms[39m [fs] [2m/src/components/ui/card.tsx[22m
+2026-09-26T22:24:13.813Z vite:load [33m38.78ms[39m [fs] [2m/src/components/ui/button.tsx[22m
+2026-09-26T22:24:13.816Z vite:load [33m31.01ms[39m [fs] [2m/src/lib/session-storage.ts[22m
+2026-09-26T22:24:13.816Z vite:load [33m41.72ms[39m [fs] [2m/src/components/ui/toast.tsx[22m
+2026-09-26T22:24:13.820Z vite:load [33m35.20ms[39m [fs] [2m/src/lib/sort-columns.ts[22m
+2026-09-26T22:24:13.820Z vite:load [33m45.85ms[39m [fs] [2m/src/lib/database.ts[22m
+2026-09-26T22:24:13.821Z vite:load [33m36.00ms[39m [fs] [2m/src/components/ProcessedDataTable.tsx[22m
+2026-09-26T22:24:13.835Z vite:load [31m50.63ms[39m [fs] [2m/src/lib/excel.ts[22m
+2026-09-26T22:24:13.836Z vite:load [31m51.39ms[39m [fs] [2m/src/lib/mutations/use-generate-xml.ts[22m
+2026-09-26T22:24:13.836Z vite:load [33m45.27ms[39m [fs] [2m/src/components/BookDataTable.tsx[22m
+2026-09-26T22:24:13.851Z vite:load [31m59.68ms[39m [fs] [2m/src/components/ui/scroll-area.tsx[22m
+2026-09-26T22:24:13.853Z vite:load [31m61.57ms[39m [fs] [2m/src/components/ExcelUpload.tsx[22m
+2026-09-26T22:24:13.858Z vite:load [31m67.12ms[39m [fs] [2m/src/components/ui/input.tsx[22m
+2026-09-26T22:24:13.860Z vite:load [31m68.73ms[39m [fs] [2m/src/components/ui/select.tsx[22m
+2026-09-26T22:24:13.863Z vite:load [31m71.55ms[39m [fs] [2m/src/lib/mutations/use-search-books.ts[22m
+2026-09-26T22:24:13.863Z vite:load [31m71.71ms[39m [fs] [2m/src/lib/search-config.ts[22m
+2026-09-26T22:24:13.863Z vite:load [31m79.99ms[39m [plugin] [2m/node_modules/.vite/deps/next-themes.js?v=7c018f19[22m
+2026-09-26T22:24:13.864Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.864Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.864Z vite:import-analysis [32m0.25ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/next-themes.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.864Z vite:transform [32m0.34ms[39m [2m/node_modules/.vite/deps/next-themes.js?v=7c018f19[22m
+2026-09-26T22:24:13.864Z vite:load [31m80.44ms[39m [plugin] [2m/node_modules/.vite/deps/sonner.js?v=7c018f19[22m
+2026-09-26T22:24:13.864Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.864Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.864Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.864Z vite:import-analysis [32m0.42ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/sonner.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.864Z vite:transform [32m0.57ms[39m [2m/node_modules/.vite/deps/sonner.js?v=7c018f19[22m
+2026-09-26T22:24:13.867Z vite:resolve [32m1.40ms[39m [36m./ui/dropdown-menu[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/dropdown-menu.tsx[22m
+2026-09-26T22:24:13.867Z vite:resolve [32m1.52ms[39m [36m@radix-ui/react-dropdown-menu[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=7c018f19[22m
+2026-09-26T22:24:13.867Z vite:resolve [32m1.50ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ThemeToggle[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ThemeToggle.tsx[22m
+2026-09-26T22:24:13.867Z vite:resolve [32m1.72ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/avatar[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/avatar.tsx[22m
+2026-09-26T22:24:13.867Z vite:resolve [32m1.77ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/sheet[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/sheet.tsx[22m
+2026-09-26T22:24:13.867Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.867Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.867Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.867Z vite:resolve [32m2.21ms[39m [36m@/components/ThemeToggle[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ThemeToggle.tsx[22m
+2026-09-26T22:24:13.867Z vite:resolve [32m2.23ms[39m [36m@/components/ui/avatar[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/avatar.tsx[22m
+2026-09-26T22:24:13.867Z vite:resolve [32m2.26ms[39m [36m@/components/ui/sheet[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/sheet.tsx[22m
+2026-09-26T22:24:13.867Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.867Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:13.867Z vite:cache [memory] [2m/node_modules/.vite/deps/react-router-dom.js?v=7c018f19[22m
+2026-09-26T22:24:13.868Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js[39m
+2026-09-26T22:24:13.868Z vite:cache [memory] [2m/src/context/authContext.tsx[22m
+2026-09-26T22:24:13.868Z vite:hmr [self-accepts] [2msrc/components/Navbar.tsx[22m
+2026-09-26T22:24:13.869Z vite:import-analysis [32m3.59ms[39m [2m[12 imports rewritten] [2msrc/components/Navbar.tsx[22m[2m[22m
+2026-09-26T22:24:13.869Z vite:transform [31m70.55ms[39m [2m/src/components/Navbar.tsx[22m
+2026-09-26T22:24:13.869Z vite:time [31m72.76ms[39m [2m/src/components/Navbar.tsx[22m
+2026-09-26T22:24:13.873Z vite:import-analysis [32m0.15ms[39m [2m[no imports] [2msrc/lib/search-config.ts[22m[2m[22m
+2026-09-26T22:24:13.873Z vite:import-analysis [32m0.35ms[39m [2m[no imports] [2msrc/lib/session-storage.ts[22m[2m[22m
+2026-09-26T22:24:13.873Z vite:import-analysis [32m0.60ms[39m [2m[no imports] [2msrc/lib/sort-columns.ts[22m[2m[22m
+2026-09-26T22:24:13.874Z vite:transform [33m10.84ms[39m [2m/src/lib/search-config.ts[22m
+2026-09-26T22:24:13.874Z vite:transform [31m58.06ms[39m [2m/src/lib/session-storage.ts[22m
+2026-09-26T22:24:13.874Z vite:transform [31m53.94ms[39m [2m/src/lib/sort-columns.ts[22m
+2026-09-26T22:24:13.875Z vite:resolve [32m1.95ms[39m [36mxlsx[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/xlsx.js?v=7c018f19[22m
+2026-09-26T22:24:13.875Z vite:resolve [32m1.81ms[39m [36mclsx[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/clsx.js?v=7c018f19[22m
+2026-09-26T22:24:13.875Z vite:resolve [32m1.82ms[39m [36mtailwind-merge[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/tailwind-merge.js?v=7c018f19[22m
+2026-09-26T22:24:13.875Z vite:resolve [32m1.82ms[39m [36mdexie[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/dexie.js?v=7c018f19[22m
+2026-09-26T22:24:13.875Z vite:resolve [32m1.74ms[39m [36m@radix-ui/react-slot[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-slot.js?v=7c018f19[22m
+2026-09-26T22:24:13.875Z vite:resolve [32m1.75ms[39m [36mclass-variance-authority[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/class-variance-authority.js?v=7c018f19[22m
+2026-09-26T22:24:13.875Z vite:resolve [32m1.70ms[39m [36m@radix-ui/react-scroll-area[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-scroll-area.js?v=7c018f19[22m
+2026-09-26T22:24:13.875Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.875Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.875Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.875Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.875Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.875Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:13.876Z vite:import-analysis [32m3.00ms[39m [2m[1 imports rewritten] [2msrc/hooks/use-toast.ts[22m[2m[22m
+2026-09-26T22:24:13.876Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/xlsx.js[39m
+2026-09-26T22:24:13.876Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/clsx.js[39m
+2026-09-26T22:24:13.876Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/tailwind-merge.js[39m
+2026-09-26T22:24:13.876Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/dexie.js[39m
+2026-09-26T22:24:13.876Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-slot.js[39m
+2026-09-26T22:24:13.876Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/class-variance-authority.js[39m
+2026-09-26T22:24:13.876Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-scroll-area.js[39m
+2026-09-26T22:24:13.876Z vite:import-analysis [32m3.24ms[39m [2m[1 imports rewritten] [2msrc/lib/excel.ts[22m[2m[22m
+2026-09-26T22:24:13.876Z vite:import-analysis [32m3.26ms[39m [2m[2 imports rewritten] [2msrc/lib/utils.ts[22m[2m[22m
+2026-09-26T22:24:13.876Z vite:import-analysis [32m3.28ms[39m [2m[1 imports rewritten] [2msrc/lib/database.ts[22m[2m[22m
+2026-09-26T22:24:13.876Z vite:transform [31m66.84ms[39m [2m/src/hooks/use-toast.ts[22m
+2026-09-26T22:24:13.876Z vite:hmr [self-accepts] [2msrc/components/ui/button.tsx[22m
+2026-09-26T22:24:13.876Z vite:hmr [self-accepts] [2msrc/components/ui/scroll-area.tsx[22m
+2026-09-26T22:24:13.876Z vite:transform [33m40.64ms[39m [2m/src/lib/excel.ts[22m
+2026-09-26T22:24:13.876Z vite:transform [31m70.97ms[39m [2m/src/lib/utils.ts[22m
+2026-09-26T22:24:13.876Z vite:transform [31m55.79ms[39m [2m/src/lib/database.ts[22m
+2026-09-26T22:24:13.876Z vite:time [31m78.24ms[39m [2m/src/hooks/use-toast.ts[22m
+2026-09-26T22:24:13.877Z vite:time [31m80.10ms[39m [2m/src/lib/utils.ts[22m
+2026-09-26T22:24:13.877Z vite:time [31m78.54ms[39m [2m/src/lib/database.ts[22m
+2026-09-26T22:24:13.877Z vite:import-analysis [32m4.06ms[39m [2m[5 imports rewritten] [2msrc/components/ui/button.tsx[22m[2m[22m
+2026-09-26T22:24:13.877Z vite:import-analysis [32m4.09ms[39m [2m[4 imports rewritten] [2msrc/components/ui/scroll-area.tsx[22m[2m[22m
+2026-09-26T22:24:13.877Z vite:transform [31m63.62ms[39m [2m/src/components/ui/button.tsx[22m
+2026-09-26T22:24:13.877Z vite:transform [33m26.05ms[39m [2m/src/components/ui/scroll-area.tsx[22m
+2026-09-26T22:24:13.878Z vite:resolve [32m0.92ms[39m [36m@radix-ui/react-toast[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-toast.js?v=7c018f19[22m
+2026-09-26T22:24:13.879Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.879Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.879Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.879Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.879Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.879Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.879Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.879Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:13.879Z vite:hmr [self-accepts] [2msrc/components/Footer.tsx[22m
+2026-09-26T22:24:13.880Z vite:import-analysis [32m2.18ms[39m [2m[2 imports rewritten] [2msrc/components/Footer.tsx[22m[2m[22m
+2026-09-26T22:24:13.880Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-toast.js[39m
+2026-09-26T22:24:13.880Z vite:transform [31m76.30ms[39m [2m/src/components/Footer.tsx[22m
+2026-09-26T22:24:13.880Z vite:cache [memory] [2m/src/lib/utils.ts[22m
+2026-09-26T22:24:13.880Z vite:hmr [self-accepts] [2msrc/components/ui/toast.tsx[22m
+2026-09-26T22:24:13.880Z vite:hmr [self-accepts] [2msrc/components/ui/input.tsx[22m
+2026-09-26T22:24:13.880Z vite:hmr [self-accepts] [2msrc/components/ui/card.tsx[22m
+2026-09-26T22:24:13.880Z vite:time [31m83.87ms[39m [2m/src/components/Footer.tsx[22m
+2026-09-26T22:24:13.880Z vite:import-analysis [32m2.82ms[39m [2m[7 imports rewritten] [2msrc/components/ui/toast.tsx[22m[2m[22m
+2026-09-26T22:24:13.880Z vite:import-analysis [32m2.85ms[39m [2m[3 imports rewritten] [2msrc/components/ui/input.tsx[22m[2m[22m
+2026-09-26T22:24:13.880Z vite:import-analysis [32m2.87ms[39m [2m[3 imports rewritten] [2msrc/components/ui/card.tsx[22m[2m[22m
+2026-09-26T22:24:13.881Z vite:transform [31m64.47ms[39m [2m/src/components/ui/toast.tsx[22m
+2026-09-26T22:24:13.881Z vite:transform [33m22.33ms[39m [2m/src/components/ui/input.tsx[22m
+2026-09-26T22:24:13.881Z vite:transform [31m71.14ms[39m [2m/src/components/ui/card.tsx[22m
+2026-09-26T22:24:13.881Z vite:time [31m82.99ms[39m [2m/src/components/ui/toast.tsx[22m
+2026-09-26T22:24:13.883Z vite:resolve [32m1.70ms[39m [36m../api[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/api.ts[22m
+2026-09-26T22:24:13.883Z vite:resolve [32m1.90ms[39m [36m@tanstack/react-table[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@tanstack_react-table.js?v=7c018f19[22m
+2026-09-26T22:24:13.884Z vite:resolve [32m1.86ms[39m [36m@radix-ui/react-select[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-select.js?v=7c018f19[22m
+2026-09-26T22:24:13.884Z vite:resolve [32m1.80ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/styles/custom-scrollbar.module.css[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/styles/custom-scrollbar.module.css[22m
+2026-09-26T22:24:13.884Z vite:resolve [32m1.81ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/badge[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/badge.tsx[22m
+2026-09-26T22:24:13.884Z vite:resolve [32m1.82ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/pagination[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/pagination.tsx[22m
+2026-09-26T22:24:13.884Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.884Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.884Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.884Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.884Z vite:resolve [32m2.31ms[39m [36m@/components/styles/custom-scrollbar.module.css[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/styles/custom-scrollbar.module.css[22m
+2026-09-26T22:24:13.884Z vite:resolve [32m2.33ms[39m [36m@/components/ui/badge[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/badge.tsx[22m
+2026-09-26T22:24:13.884Z vite:resolve [32m2.58ms[39m [36m@/components/ui/pagination[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/pagination.tsx[22m
+2026-09-26T22:24:13.884Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.884Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:13.884Z vite:cache [memory] [2m/node_modules/.vite/deps/@tanstack_react-query.js?v=7c018f19[22m
+2026-09-26T22:24:13.885Z vite:import-analysis [32m3.36ms[39m [2m[2 imports rewritten] [2msrc/lib/mutations/use-generate-xml.ts[22m[2m[22m
+2026-09-26T22:24:13.885Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@tanstack_react-table.js[39m
+2026-09-26T22:24:13.885Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-select.js[39m
+2026-09-26T22:24:13.885Z vite:transform [33m48.70ms[39m [2m/src/lib/mutations/use-generate-xml.ts[22m
+2026-09-26T22:24:13.885Z vite:cache [memory] [2m/src/lib/session-storage.ts[22m
+2026-09-26T22:24:13.885Z vite:cache [memory] [2m/src/lib/sort-columns.ts[22m
+2026-09-26T22:24:13.885Z vite:cache [memory] [2m/src/lib/utils.ts[22m
+2026-09-26T22:24:13.885Z vite:hmr [self-accepts] [2msrc/components/ui/select.tsx[22m
+2026-09-26T22:24:13.885Z vite:hmr [self-accepts] [2msrc/components/ProcessedDataTable.tsx[22m
+2026-09-26T22:24:13.885Z vite:import-analysis [32m3.79ms[39m [2m[5 imports rewritten] [2msrc/components/ui/select.tsx[22m[2m[22m
+2026-09-26T22:24:13.885Z vite:import-analysis [32m3.82ms[39m [2m[10 imports rewritten] [2msrc/components/ProcessedDataTable.tsx[22m[2m[22m
+2026-09-26T22:24:13.886Z vite:transform [33m25.52ms[39m [2m/src/components/ui/select.tsx[22m
+2026-09-26T22:24:13.886Z vite:transform [31m65.16ms[39m [2m/src/components/ProcessedDataTable.tsx[22m
+2026-09-26T22:24:13.888Z vite:resolve [32m1.34ms[39m [36m./ui/select[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/select.tsx[22m
+2026-09-26T22:24:13.888Z vite:resolve [32m1.36ms[39m [36m../search-config[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/lib/search-config.ts[22m
+2026-09-26T22:24:13.888Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.888Z vite:cache [memory] [2m/src/components/ui/select.tsx[22m
+2026-09-26T22:24:13.888Z vite:cache [memory] [2m/src/lib/search-config.ts[22m
+2026-09-26T22:24:13.888Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.888Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.888Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.888Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:13.888Z vite:cache [memory] [2m/node_modules/.vite/deps/@tanstack_react-query.js?v=7c018f19[22m
+2026-09-26T22:24:13.889Z vite:import-analysis [32m2.13ms[39m [2m[3 imports rewritten] [2msrc/lib/mutations/use-search-books.ts[22m[2m[22m
+2026-09-26T22:24:13.889Z vite:transform [33m25.80ms[39m [2m/src/lib/mutations/use-search-books.ts[22m
+2026-09-26T22:24:13.889Z vite:cache [memory] [2m/src/components/ui/button.tsx[22m
+2026-09-26T22:24:13.889Z vite:cache [memory] [2m/src/components/ui/card.tsx[22m
+2026-09-26T22:24:13.889Z vite:cache [memory] [2m/src/hooks/use-toast.ts[22m
+2026-09-26T22:24:13.889Z vite:cache [memory] [2m/src/lib/database.ts[22m
+2026-09-26T22:24:13.889Z vite:hmr [self-accepts] [2msrc/components/ExcelUpload.tsx[22m
+2026-09-26T22:24:13.889Z vite:import-analysis [32m2.36ms[39m [2m[10 imports rewritten] [2msrc/components/ExcelUpload.tsx[22m[2m[22m
+2026-09-26T22:24:13.889Z vite:transform [33m36.34ms[39m [2m/src/components/ExcelUpload.tsx[22m
+2026-09-26T22:24:13.892Z vite:resolve [32m2.60ms[39m [36m./ui/switch[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/switch.tsx[22m
+2026-09-26T22:24:13.893Z vite:resolve [32m2.70ms[39m [36mC:\Users\hsteel01\Box\01 - P Drive 2\Alma\Cataloging\Snapicat\snapicat\apps\client\src/components/ui/checkbox[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/checkbox.tsx[22m
+2026-09-26T22:24:13.893Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:13.893Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.893Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:13.893Z vite:resolve [32m3.04ms[39m [36m@/components/ui/checkbox[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/src/components/ui/checkbox.tsx[22m
+2026-09-26T22:24:13.893Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:13.893Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:13.893Z vite:cache [memory] [2m/src/components/ui/button.tsx[22m
+2026-09-26T22:24:13.894Z vite:cache [memory] [2m/src/components/ui/card.tsx[22m
+2026-09-26T22:24:13.894Z vite:cache [memory] [2m/src/components/ui/input.tsx[22m
+2026-09-26T22:24:13.894Z vite:cache [memory] [2m/src/components/ui/select.tsx[22m
+2026-09-26T22:24:13.894Z vite:cache [memory] [2m/src/lib/session-storage.ts[22m
+2026-09-26T22:24:13.894Z vite:cache [memory] [2m/src/lib/sort-columns.ts[22m
+2026-09-26T22:24:13.894Z vite:cache [memory] [2m/src/lib/utils.ts[22m
+2026-09-26T22:24:13.894Z vite:hmr [self-accepts] [2msrc/components/BookDataTable.tsx[22m
+2026-09-26T22:24:13.894Z vite:import-analysis [32m4.23ms[39m [2m[17 imports rewritten] [2msrc/components/BookDataTable.tsx[22m[2m[22m
+2026-09-26T22:24:13.895Z vite:transform [31m58.15ms[39m [2m/src/components/BookDataTable.tsx[22m
+2026-09-26T22:24:13.895Z vite:cache [304] [2m/src/components/ui/button.tsx[22m
+2026-09-26T22:24:13.895Z vite:time [32m0.07ms[39m [2m/src/components/ui/button.tsx[22m
+2026-09-26T22:24:13.895Z vite:load [31m122.65ms[39m [plugin] [2m/node_modules/.vite/deps/lucide-react.js?v=7c018f19[22m
+2026-09-26T22:24:13.902Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.902Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.902Z vite:import-analysis [32m4.91ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/lucide-react.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.902Z vite:transform [32m6.73ms[39m [2m/node_modules/.vite/deps/lucide-react.js?v=7c018f19[22m
+2026-09-26T22:24:13.904Z vite:cache [304] [2m/src/components/ui/card.tsx[22m
+2026-09-26T22:24:13.904Z vite:time [32m0.10ms[39m [2m/src/components/ui/card.tsx[22m
+2026-09-26T22:24:13.904Z vite:cache [304] [2m/src/components/BookDataTable.tsx[22m
+2026-09-26T22:24:13.904Z vite:time [32m0.06ms[39m [2m/src/components/BookDataTable.tsx[22m
+2026-09-26T22:24:13.905Z vite:cache [304] [2m/src/components/ExcelUpload.tsx[22m
+2026-09-26T22:24:13.905Z vite:time [32m0.06ms[39m [2m/src/components/ExcelUpload.tsx[22m
+2026-09-26T22:24:13.905Z vite:cache [304] [2m/src/components/ui/input.tsx[22m
+2026-09-26T22:24:13.905Z vite:time [32m0.06ms[39m [2m/src/components/ui/input.tsx[22m
+2026-09-26T22:24:13.905Z vite:cache [304] [2m/src/components/ui/scroll-area.tsx[22m
+2026-09-26T22:24:13.905Z vite:time [32m0.08ms[39m [2m/src/components/ui/scroll-area.tsx[22m
+2026-09-26T22:24:13.905Z vite:cache [304] [2m/src/components/ui/select.tsx[22m
+2026-09-26T22:24:13.905Z vite:time [32m0.05ms[39m [2m/src/components/ui/select.tsx[22m
+2026-09-26T22:24:13.906Z vite:load [31m98.13ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-KKFCISPU.js?v=7c018f19[22m
+2026-09-26T22:24:13.906Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.906Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.906Z vite:import-analysis [32m0.39ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/chunk-KKFCISPU.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.906Z vite:transform [32m0.54ms[39m [2m/node_modules/.vite/deps/chunk-KKFCISPU.js?v=7c018f19[22m
+2026-09-26T22:24:13.906Z vite:load [31m98.84ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-RN4V4E7F.js?v=7c018f19[22m
+2026-09-26T22:24:13.907Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.907Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.907Z vite:import-analysis [32m0.25ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/chunk-RN4V4E7F.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.907Z vite:transform [32m0.34ms[39m [2m/node_modules/.vite/deps/chunk-RN4V4E7F.js?v=7c018f19[22m
+2026-09-26T22:24:13.907Z vite:load [31m99.31ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-T22NG25K.js?v=7c018f19[22m
+2026-09-26T22:24:13.907Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.907Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.907Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.908Z vite:import-analysis [32m0.65ms[39m [2m[4 imports rewritten] [2mnode_modules/.vite/deps/chunk-T22NG25K.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.908Z vite:transform [32m0.85ms[39m [2m/node_modules/.vite/deps/chunk-T22NG25K.js?v=7c018f19[22m
+2026-09-26T22:24:13.908Z vite:load [31m100.35ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-KYYT4GRY.js?v=7c018f19[22m
+2026-09-26T22:24:13.910Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-RN4V4E7F.js?v=7c018f19[22m
+2026-09-26T22:24:13.910Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.910Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.910Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.910Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.910Z vite:import-analysis [32m1.46ms[39m [2m[9 imports rewritten] [2mnode_modules/.vite/deps/chunk-KYYT4GRY.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.910Z vite:transform [32m2.00ms[39m [2m/node_modules/.vite/deps/chunk-KYYT4GRY.js?v=7c018f19[22m
+2026-09-26T22:24:13.910Z vite:load [31m102.57ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-VMLKBH7E.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:import-analysis [32m0.42ms[39m [2m[4 imports rewritten] [2mnode_modules/.vite/deps/chunk-VMLKBH7E.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.911Z vite:transform [32m0.54ms[39m [2m/node_modules/.vite/deps/chunk-VMLKBH7E.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:load [31m103.21ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:import-analysis [32m0.17ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.911Z vite:transform [32m0.27ms[39m [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:load [31m103.54ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:import-analysis [32m0.20ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.911Z vite:transform [32m0.25ms[39m [2m/node_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m
+2026-09-26T22:24:13.911Z vite:load [31m103.84ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:import-analysis [32m0.12ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.912Z vite:transform [32m0.17ms[39m [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:load [31m104.12ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:import-analysis [32m0.30ms[39m [2m[5 imports rewritten] [2mnode_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.912Z vite:transform [32m0.37ms[39m [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:load [31m104.56ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-SQZNE2E2.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:13.912Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.913Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.913Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.913Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.913Z vite:import-analysis [32m0.39ms[39m [2m[8 imports rewritten] [2mnode_modules/.vite/deps/chunk-SQZNE2E2.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.913Z vite:transform [32m0.46ms[39m [2m/node_modules/.vite/deps/chunk-SQZNE2E2.js?v=7c018f19[22m
+2026-09-26T22:24:13.913Z vite:load [31m105.08ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:13.913Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.913Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.913Z vite:import-analysis [32m0.13ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.913Z vite:transform [32m0.18ms[39m [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:13.913Z vite:cache [304] [2m/src/lib/excel.ts[22m
+2026-09-26T22:24:13.913Z vite:time [32m0.08ms[39m [2m/src/lib/excel.ts[22m
+2026-09-26T22:24:13.914Z vite:cache [304] [2m/src/lib/mutations/use-search-books.ts[22m
+2026-09-26T22:24:13.914Z vite:time [32m0.11ms[39m [2m/src/lib/mutations/use-search-books.ts[22m
+2026-09-26T22:24:13.914Z vite:load [33m45.62ms[39m [fs] [2m/src/components/ui/avatar.tsx[22m
+2026-09-26T22:24:13.917Z vite:load [33m48.26ms[39m [fs] [2m/src/components/ThemeToggle.tsx[22m
+2026-09-26T22:24:13.919Z vite:load [31m50.75ms[39m [fs] [2m/src/components/ui/dropdown-menu.tsx[22m
+2026-09-26T22:24:13.924Z vite:load [31m54.98ms[39m [fs] [2m/src/components/ui/sheet.tsx[22m
+2026-09-26T22:24:13.929Z vite:load [31m60.79ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:resolve [32m0.22ms[39m [36m./chunk-7IU32MWM.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-7IU32MWM.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:resolve [32m0.27ms[39m [36m./chunk-35R6MJIM.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-35R6MJIM.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:resolve [32m0.28ms[39m [36m./chunk-IAGD4JUV.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-IAGD4JUV.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-KYYT4GRY.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-KKFCISPU.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-RN4V4E7F.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-SQZNE2E2.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-VMLKBH7E.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.930Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-7IU32MWM.js[39m
+2026-09-26T22:24:13.930Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-35R6MJIM.js[39m
+2026-09-26T22:24:13.930Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-IAGD4JUV.js[39m
+2026-09-26T22:24:13.930Z vite:import-analysis [32m1.29ms[39m [2m[17 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.930Z vite:transform [32m1.50ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=7c018f19[22m
+2026-09-26T22:24:13.931Z vite:cache [304] [2m/src/lib/search-config.ts[22m
+2026-09-26T22:24:13.931Z vite:time [32m0.06ms[39m [2m/src/lib/search-config.ts[22m
+2026-09-26T22:24:13.931Z vite:cache [304] [2m/src/lib/session-storage.ts[22m
+2026-09-26T22:24:13.931Z vite:time [32m0.05ms[39m [2m/src/lib/session-storage.ts[22m
+2026-09-26T22:24:13.931Z vite:cache [304] [2m/src/lib/sort-columns.ts[22m
+2026-09-26T22:24:13.931Z vite:time [32m0.06ms[39m [2m/src/lib/sort-columns.ts[22m
+2026-09-26T22:24:13.932Z vite:cache [304] [2m/src/components/ProcessedDataTable.tsx[22m
+2026-09-26T22:24:13.932Z vite:time [32m0.05ms[39m [2m/src/components/ProcessedDataTable.tsx[22m
+2026-09-26T22:24:13.932Z vite:cache [304] [2m/src/lib/mutations/use-generate-xml.ts[22m
+2026-09-26T22:24:13.932Z vite:time [32m0.04ms[39m [2m/src/lib/mutations/use-generate-xml.ts[22m
+2026-09-26T22:24:13.932Z vite:load [31m56.59ms[39m [plugin] [2m/node_modules/.vite/deps/clsx.js?v=7c018f19[22m
+2026-09-26T22:24:13.933Z vite:resolve [32m0.06ms[39m [36m./chunk-U7P2NEEE.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-U7P2NEEE.js?v=7c018f19[22m
+2026-09-26T22:24:13.933Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.933Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-U7P2NEEE.js[39m
+2026-09-26T22:24:13.933Z vite:import-analysis [32m0.64ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/clsx.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.933Z vite:transform [32m0.82ms[39m [2m/node_modules/.vite/deps/clsx.js?v=7c018f19[22m
+2026-09-26T22:24:13.933Z vite:load [31m57.57ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-slot.js?v=7c018f19[22m
+2026-09-26T22:24:13.934Z vite:resolve [32m0.14ms[39m [36m./chunk-PAQG5CSH.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-PAQG5CSH.js?v=7c018f19[22m
+2026-09-26T22:24:13.934Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:13.934Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.934Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.934Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.934Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-PAQG5CSH.js[39m
+2026-09-26T22:24:13.934Z vite:import-analysis [32m0.80ms[39m [2m[5 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-slot.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.934Z vite:transform [32m0.92ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-slot.js?v=7c018f19[22m
+2026-09-26T22:24:13.934Z vite:load [31m58.61ms[39m [plugin] [2m/node_modules/.vite/deps/class-variance-authority.js?v=7c018f19[22m
+2026-09-26T22:24:13.935Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.935Z vite:import-analysis [32m0.38ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/class-variance-authority.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.935Z vite:transform [32m0.52ms[39m [2m/node_modules/.vite/deps/class-variance-authority.js?v=7c018f19[22m
+2026-09-26T22:24:13.935Z vite:load [31m59.22ms[39m [plugin] [2m/node_modules/.vite/deps/tailwind-merge.js?v=7c018f19[22m
+2026-09-26T22:24:13.935Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.935Z vite:import-analysis [32m0.42ms[39m [2m[1 imports rewritten] [2mnode_modules/.vite/deps/tailwind-merge.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.936Z vite:transform [32m0.63ms[39m [2m/node_modules/.vite/deps/tailwind-merge.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:load [31m59.92ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-scroll-area.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:resolve [32m0.14ms[39m [36m./chunk-6ZMM2PAV.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-6ZMM2PAV.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-VMLKBH7E.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.936Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-6ZMM2PAV.js[39m
+2026-09-26T22:24:13.936Z vite:import-analysis [32m0.71ms[39m [2m[11 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-scroll-area.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.936Z vite:transform [32m0.83ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-scroll-area.js?v=7c018f19[22m
+2026-09-26T22:24:13.937Z vite:load [31m60.90ms[39m [plugin] [2m/node_modules/.vite/deps/dexie.js?v=7c018f19[22m
+2026-09-26T22:24:13.938Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:13.938Z vite:import-analysis [32m1.20ms[39m [2m[1 imports rewritten] [2mnode_modules/.vite/deps/dexie.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:13.938Z vite:transform [32m1.65ms[39m [2m/node_modules/.vite/deps/dexie.js?v=7c018f19[22m
+2026-09-26T22:24:13.939Z vite:load [31m53.41ms[39m [fs] [2m/src/components/styles/custom-scrollbar.module.css[22m
+2026-09-26T22:24:13.994Z vite:hmr [detected api usage] [2msrc/components/styles/custom-scrollbar.module.css[22m
+2026-09-26T22:24:13.994Z vite:import-analysis [32m0.25ms[39m [2m[0 imports rewritten] [2msrc/components/styles/custom-scrollbar.module.css[22m[2m[22m
+2026-09-26T22:24:13.994Z vite:transform [31m55.80ms[39m [2m/src/components/styles/custom-scrollbar.module.css[22m
+2026-09-26T22:24:13.995Z vite:load [31m110.11ms[39m [fs] [2m/src/lib/api.ts[22m
+2026-09-26T22:24:13.995Z vite:load [31m110.19ms[39m [fs] [2m/src/components/ui/badge.tsx[22m
+2026-09-26T22:24:13.997Z vite:load [31m112.07ms[39m [fs] [2m/src/components/ui/pagination.tsx[22m
+2026-09-26T22:24:14.000Z vite:load [31m106.31ms[39m [fs] [2m/src/components/ui/checkbox.tsx[22m
+2026-09-26T22:24:14.002Z vite:load [31m108.31ms[39m [fs] [2m/src/components/ui/switch.tsx[22m
+2026-09-26T22:24:14.003Z vite:load [31m123.51ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-toast.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-T22NG25K.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-SQZNE2E2.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-VMLKBH7E.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.004Z vite:import-analysis [32m1.08ms[39m [2m[13 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-toast.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.004Z vite:transform [32m1.21ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-toast.js?v=7c018f19[22m
+2026-09-26T22:24:14.006Z vite:resolve [32m0.81ms[39m [36m@radix-ui/react-avatar[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-avatar.js?v=7c018f19[22m
+2026-09-26T22:24:14.006Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:14.006Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:14.006Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:14.007Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-avatar.js[39m
+2026-09-26T22:24:14.007Z vite:cache [memory] [2m/src/lib/utils.ts[22m
+2026-09-26T22:24:14.007Z vite:hmr [self-accepts] [2msrc/components/ui/avatar.tsx[22m
+2026-09-26T22:24:14.007Z vite:import-analysis [32m2.34ms[39m [2m[4 imports rewritten] [2msrc/components/ui/avatar.tsx[22m[2m[22m
+2026-09-26T22:24:14.008Z vite:transform [31m93.34ms[39m [2m/src/components/ui/avatar.tsx[22m
+2026-09-26T22:24:14.008Z vite:cache [304] [2m/src/components/ui/avatar.tsx[22m
+2026-09-26T22:24:14.008Z vite:time [32m0.15ms[39m [2m/src/components/ui/avatar.tsx[22m
+2026-09-26T22:24:14.009Z vite:load [31m124.50ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-select.js?v=7c018f19[22m
+2026-09-26T22:24:14.010Z vite:resolve [32m0.37ms[39m [36m./chunk-PJP2U4MR.js[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-PJP2U4MR.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-T22NG25K.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-KYYT4GRY.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-KKFCISPU.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-RN4V4E7F.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-SQZNE2E2.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/chunk-PJP2U4MR.js[39m
+2026-09-26T22:24:14.011Z vite:import-analysis [32m1.46ms[39m [2m[19 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-select.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.011Z vite:transform [32m1.70ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-select.js?v=7c018f19[22m
+2026-09-26T22:24:14.011Z vite:load [31m126.49ms[39m [plugin] [2m/node_modules/.vite/deps/@tanstack_react-table.js?v=7c018f19[22m
+2026-09-26T22:24:14.012Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.012Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.012Z vite:import-analysis [32m0.76ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/@tanstack_react-table.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.012Z vite:transform [32m1.06ms[39m [2m/node_modules/.vite/deps/@tanstack_react-table.js?v=7c018f19[22m
+2026-09-26T22:24:14.013Z vite:load [31m137.09ms[39m [plugin] [2m/node_modules/.vite/deps/xlsx.js?v=7c018f19[22m
+2026-09-26T22:24:14.019Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.019Z vite:import-analysis [32m3.87ms[39m [2m[1 imports rewritten] [2mnode_modules/.vite/deps/xlsx.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.019Z vite:transform [32m5.91ms[39m [2m/node_modules/.vite/deps/xlsx.js?v=7c018f19[22m
+2026-09-26T22:24:14.021Z vite:cache [304] [2m/src/components/styles/custom-scrollbar.module.css[22m
+2026-09-26T22:24:14.021Z vite:time [32m0.17ms[39m [2m/src/components/styles/custom-scrollbar.module.css[22m
+2026-09-26T22:24:14.025Z vite:resolve [32m2.76ms[39m [36m@radix-ui/react-switch[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-switch.js?v=7c018f19[22m
+2026-09-26T22:24:14.025Z vite:resolve [32m2.79ms[39m [36m@radix-ui/react-checkbox[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-checkbox.js?v=7c018f19[22m
+2026-09-26T22:24:14.025Z vite:resolve [32m2.70ms[39m [36maxios[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/axios.js?v=7c018f19[22m
+2026-09-26T22:24:14.025Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:14.026Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:14.026Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:14.026Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:14.026Z vite:import-analysis /node_modules/.vite/deps/react.js?v=7c018f19 needs interop
+2026-09-26T22:24:14.026Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:14.026Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:14.026Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=7c018f19[22m
+2026-09-26T22:24:14.026Z vite:cache [memory] [2m/node_modules/.vite/deps/@radix-ui_react-slot.js?v=7c018f19[22m
+2026-09-26T22:24:14.026Z vite:cache [memory] [2m/node_modules/.vite/deps/class-variance-authority.js?v=7c018f19[22m
+2026-09-26T22:24:14.026Z vite:cache [memory] [2m/node_modules/.vite/deps/react.js?v=7c018f19[22m
+2026-09-26T22:24:14.026Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-switch.js[39m
+2026-09-26T22:24:14.026Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-checkbox.js[39m
+2026-09-26T22:24:14.026Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/axios.js[39m
+2026-09-26T22:24:14.027Z vite:cache [memory] [2m/src/lib/utils.ts[22m
+2026-09-26T22:24:14.027Z vite:hmr [self-accepts] [2msrc/components/ui/switch.tsx[22m
+2026-09-26T22:24:14.027Z vite:hmr [self-accepts] [2msrc/components/ui/checkbox.tsx[22m
+2026-09-26T22:24:14.027Z vite:hmr [self-accepts] [2msrc/components/ui/badge.tsx[22m
+2026-09-26T22:24:14.027Z vite:cache [memory] [2m/src/context/authContext.tsx[22m
+2026-09-26T22:24:14.027Z vite:cache [memory] [2m/src/hooks/use-toast.ts[22m
+2026-09-26T22:24:14.027Z vite:cache [memory] [2m/src/components/ui/button.tsx[22m
+2026-09-26T22:24:14.027Z vite:cache [memory] [2m/src/hooks/use-theme.tsx[22m
+2026-09-26T22:24:14.027Z vite:hmr [self-accepts] [2msrc/components/ThemeToggle.tsx[22m
+2026-09-26T22:24:14.027Z vite:import-analysis [32m4.72ms[39m [2m[4 imports rewritten] [2msrc/components/ui/switch.tsx[22m[2m[22m
+2026-09-26T22:24:14.027Z vite:import-analysis [32m4.74ms[39m [2m[5 imports rewritten] [2msrc/components/ui/checkbox.tsx[22m[2m[22m
+2026-09-26T22:24:14.027Z vite:import-analysis [32m4.76ms[39m [2m[5 imports rewritten] [2msrc/components/ui/badge.tsx[22m[2m[22m
+2026-09-26T22:24:14.027Z vite:import-analysis [32m4.77ms[39m [2m[4 imports rewritten] [2msrc/lib/api.ts[22m[2m[22m
+2026-09-26T22:24:14.027Z vite:import-analysis [32m4.83ms[39m [2m[5 imports rewritten] [2msrc/components/ThemeToggle.tsx[22m[2m[22m
+2026-09-26T22:24:14.027Z vite:transform [33m25.65ms[39m [2m/src/components/ui/switch.tsx[22m
+2026-09-26T22:24:14.027Z vite:transform [33m27.23ms[39m [2m/src/components/ui/checkbox.tsx[22m
+2026-09-26T22:24:14.027Z vite:transform [33m31.93ms[39m [2m/src/components/ui/badge.tsx[22m
+2026-09-26T22:24:14.027Z vite:transform [33m32.48ms[39m [2m/src/lib/api.ts[22m
+2026-09-26T22:24:14.027Z vite:transform [31m110.51ms[39m [2m/src/components/ThemeToggle.tsx[22m
+2026-09-26T22:24:14.028Z vite:time [32m6.04ms[39m [2m/src/components/ui/checkbox.tsx[22m
+2026-09-26T22:24:14.028Z vite:time [32m6.31ms[39m [2m/src/components/ui/badge.tsx[22m
+2026-09-26T22:24:14.028Z vite:time [33m23.18ms[39m [2m/src/components/ThemeToggle.tsx[22m
+2026-09-26T22:24:14.030Z vite:resolve [32m1.05ms[39m [36m@radix-ui/react-dialog[39m -> [2mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-dialog.js?v=7c018f19[22m
+2026-09-26T22:24:14.030Z vite:cache [memory] [2m/@react-refresh[22m
+2026-09-26T22:24:14.030Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:14.030Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:14.030Z vite:import-analysis /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19 needs interop
+2026-09-26T22:24:14.030Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:14.030Z vite:cache [memory] [2m/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js?v=7c018f19[22m
+2026-09-26T22:24:14.030Z vite:cache [memory] [2m/node_modules/.vite/deps/lucide-react.js?v=7c018f19[22m
+2026-09-26T22:24:14.030Z vite:optimize-deps load [36mC:/Users/hsteel01/Box/01 - P Drive 2/Alma/Cataloging/Snapicat/snapicat/apps/client/node_modules/.vite/deps/@radix-ui_react-dialog.js[39m
+2026-09-26T22:24:14.030Z vite:cache [memory] [2m/src/lib/utils.ts[22m
+2026-09-26T22:24:14.030Z vite:hmr [self-accepts] [2msrc/components/ui/dropdown-menu.tsx[22m
+2026-09-26T22:24:14.030Z vite:cache [memory] [2m/src/components/ui/button.tsx[22m
+2026-09-26T22:24:14.030Z vite:hmr [self-accepts] [2msrc/components/ui/pagination.tsx[22m
+2026-09-26T22:24:14.030Z vite:hmr [self-accepts] [2msrc/components/ui/sheet.tsx[22m
+2026-09-26T22:24:14.030Z vite:import-analysis [32m2.22ms[39m [2m[5 imports rewritten] [2msrc/components/ui/dropdown-menu.tsx[22m[2m[22m
+2026-09-26T22:24:14.030Z vite:import-analysis [32m2.24ms[39m [2m[5 imports rewritten] [2msrc/components/ui/pagination.tsx[22m[2m[22m
+2026-09-26T22:24:14.030Z vite:import-analysis [32m2.26ms[39m [2m[5 imports rewritten] [2msrc/components/ui/sheet.tsx[22m[2m[22m
+2026-09-26T22:24:14.031Z vite:transform [31m112.37ms[39m [2m/src/components/ui/dropdown-menu.tsx[22m
+2026-09-26T22:24:14.031Z vite:transform [33m33.90ms[39m [2m/src/components/ui/pagination.tsx[22m
+2026-09-26T22:24:14.031Z vite:transform [31m107.58ms[39m [2m/src/components/ui/sheet.tsx[22m
+2026-09-26T22:24:14.031Z vite:time [33m22.23ms[39m [2m/src/components/ui/dropdown-menu.tsx[22m
+2026-09-26T22:24:14.032Z vite:time [33m22.85ms[39m [2m/src/components/ui/sheet.tsx[22m
+2026-09-26T22:24:14.032Z vite:cache [304] [2m/src/components/ui/pagination.tsx[22m
+2026-09-26T22:24:14.032Z vite:time [32m0.09ms[39m [2m/src/components/ui/pagination.tsx[22m
+2026-09-26T22:24:14.039Z vite:cache [304] [2m/src/components/ui/switch.tsx[22m
+2026-09-26T22:24:14.039Z vite:time [32m0.20ms[39m [2m/src/components/ui/switch.tsx[22m
+2026-09-26T22:24:14.040Z vite:cache [304] [2m/src/lib/api.ts[22m
+2026-09-26T22:24:14.040Z vite:time [32m0.06ms[39m [2m/src/lib/api.ts[22m
+2026-09-26T22:24:14.040Z vite:load [31m109.90ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-35R6MJIM.js?v=7c018f19[22m
+2026-09-26T22:24:14.041Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.041Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.041Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.041Z vite:import-analysis [32m0.52ms[39m [2m[3 imports rewritten] [2mnode_modules/.vite/deps/chunk-35R6MJIM.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.041Z vite:transform [32m0.70ms[39m [2m/node_modules/.vite/deps/chunk-35R6MJIM.js?v=7c018f19[22m
+2026-09-26T22:24:14.041Z vite:load [31m110.80ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-7IU32MWM.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:import-analysis [32m0.81ms[39m [2m[6 imports rewritten] [2mnode_modules/.vite/deps/chunk-7IU32MWM.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.042Z vite:transform [32m1.00ms[39m [2m/node_modules/.vite/deps/chunk-7IU32MWM.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:load [31m111.92ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-IAGD4JUV.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.042Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.043Z vite:import-analysis [32m0.28ms[39m [2m[5 imports rewritten] [2mnode_modules/.vite/deps/chunk-IAGD4JUV.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.043Z vite:transform [32m0.36ms[39m [2m/node_modules/.vite/deps/chunk-IAGD4JUV.js?v=7c018f19[22m
+2026-09-26T22:24:14.043Z vite:load [31m106.35ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-6ZMM2PAV.js?v=7c018f19[22m
+2026-09-26T22:24:14.043Z vite:import-analysis [32m0.01ms[39m [2m[no imports] [2mnode_modules/.vite/deps/chunk-6ZMM2PAV.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.043Z vite:transform [32m0.09ms[39m[2m [skipped] [2m/node_modules/.vite/deps/chunk-6ZMM2PAV.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.043Z vite:load [31m108.86ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-PAQG5CSH.js?v=7c018f19[22m
+2026-09-26T22:24:14.043Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:14.043Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.043Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.043Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.043Z vite:import-analysis [32m0.22ms[39m [2m[4 imports rewritten] [2mnode_modules/.vite/deps/chunk-PAQG5CSH.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.043Z vite:transform [32m0.27ms[39m [2m/node_modules/.vite/deps/chunk-PAQG5CSH.js?v=7c018f19[22m
+2026-09-26T22:24:14.043Z vite:load [33m36.46ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-avatar.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-PAQG5CSH.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:import-analysis [32m0.45ms[39m [2m[8 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-avatar.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.044Z vite:transform [32m0.53ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-avatar.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:load [31m110.97ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-U7P2NEEE.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:import-analysis [32m0.01ms[39m [2m[no imports] [2mnode_modules/.vite/deps/chunk-U7P2NEEE.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.044Z vite:transform [32m0.05ms[39m[2m [skipped] [2m/node_modules/.vite/deps/chunk-U7P2NEEE.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.044Z vite:load [33m33.04ms[39m [plugin] [2m/node_modules/.vite/deps/chunk-PJP2U4MR.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:import-analysis [32m0.10ms[39m [2m[2 imports rewritten] [2mnode_modules/.vite/deps/chunk-PJP2U4MR.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.044Z vite:transform [32m0.13ms[39m [2m/node_modules/.vite/deps/chunk-PJP2U4MR.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:load [33m17.85ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-switch.js?v=7c018f19[22m
+2026-09-26T22:24:14.044Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-PJP2U4MR.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-RN4V4E7F.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:import-analysis [32m0.46ms[39m [2m[10 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-switch.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.045Z vite:transform [32m0.51ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-switch.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:load [33m18.42ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-checkbox.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-PJP2U4MR.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-RN4V4E7F.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-VMLKBH7E.js?v=7c018f19[22m
+2026-09-26T22:24:14.045Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:14.046Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:14.046Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:14.046Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.046Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:14.046Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.046Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.046Z vite:import-analysis [32m0.91ms[39m [2m[11 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-checkbox.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.046Z vite:transform [32m1.00ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-checkbox.js?v=7c018f19[22m
+2026-09-26T22:24:14.046Z vite:load [33m19.48ms[39m [plugin] [2m/node_modules/.vite/deps/axios.js?v=7c018f19[22m
+2026-09-26T22:24:14.047Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.047Z vite:import-analysis [32m0.83ms[39m [2m[1 imports rewritten] [2mnode_modules/.vite/deps/axios.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.047Z vite:transform [32m1.23ms[39m [2m/node_modules/.vite/deps/axios.js?v=7c018f19[22m
+2026-09-26T22:24:14.047Z vite:load [33m17.03ms[39m [plugin] [2m/node_modules/.vite/deps/@radix-ui_react-dialog.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-7IU32MWM.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-KKFCISPU.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-SQZNE2E2.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-GUL5SRRD.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JX33HBUH.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-VMLKBH7E.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-4ELFZULD.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-DAECNDN6.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-J2IBHCDB.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZTZZFBWU.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-ZO4MPYSA.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-JYVDFSE2.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:cache [memory] [2m/node_modules/.vite/deps/chunk-G3PMV62Z.js?v=7c018f19[22m
+2026-09-26T22:24:14.048Z vite:import-analysis [32m0.93ms[39m [2m[13 imports rewritten] [2mnode_modules/.vite/deps/@radix-ui_react-dialog.js?v=7c018f19[22m[2m[22m
+2026-09-26T22:24:14.048Z vite:transform [32m1.07ms[39m [2m/node_modules/.vite/deps/@radix-ui_react-dialog.js?v=7c018f19[22m
+2026-09-26T22:24:14.074Z vite:resolve [32m0.45ms[39m [36m/api/me[39m -> [2mnull[22m
+2026-09-26T22:24:14.074Z vite:html-fallback Rewriting GET /api/me to /index.html
+2026-09-26T22:24:14.077Z vite:cache [memory-hmr] [2m/src/main.tsx[22m
+2026-09-26T22:24:14.077Z vite:cache [memory] [2m/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=7c018f19[22m
+2026-09-26T22:24:14.077Z vite:cache [memory] [2m/node_modules/.vite/deps/react-dom_client.js?v=7c018f19[22m
+2026-09-26T22:24:14.077Z vite:cache [memory] [2m/src/App.tsx[22m
+2026-09-26T22:24:14.077Z vite:time [32m4.09ms[39m [2m/index.html[22m
+2026-09-26T22:24:14.078Z vite:load [32m0.85ms[39m [fs] [2m/src/index.css[22m
+2026-09-26T22:24:14.102Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-09-26T22:24:14.102Z vite:import-analysis [32m0.43ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-09-26T22:24:14.102Z vite:transform [33m24.36ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.108Z vite:hmr [file change] [2mvite-debug.txt[22m
+[2m6:24:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+2026-09-26T22:24:14.109Z vite:hmr (ssr) [no modules matched] [2mvite-debug.txt[22m
+2026-09-26T22:24:14.113Z vite:time [32m0.77ms[39m [2m/logo.svg[22m
+2026-09-26T22:24:14.120Z vite:load [32m3.86ms[39m [fs] [2m/src/index.css[22m
+2026-09-26T22:24:14.170Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-09-26T22:24:14.171Z vite:import-analysis [32m0.66ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-09-26T22:24:14.171Z vite:transform [31m50.25ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.171Z vite:time [31m54.85ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.176Z vite:hmr [file change] [2mvite-debug.txt[22m
+[2m6:24:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+2026-09-26T22:24:14.177Z vite:hmr (ssr) [no modules matched] [2mvite-debug.txt[22m
+2026-09-26T22:24:14.194Z vite:load [32m0.91ms[39m [fs] [2m/src/index.css[22m
+2026-09-26T22:24:14.236Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-09-26T22:24:14.236Z vite:import-analysis [32m0.64ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-09-26T22:24:14.236Z vite:transform [33m42.11ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.237Z vite:time [33m43.83ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.242Z vite:hmr [file change] [2mvite-debug.txt[22m
+[2m6:24:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+2026-09-26T22:24:14.243Z vite:hmr (ssr) [no modules matched] [2mvite-debug.txt[22m
+2026-09-26T22:24:14.251Z vite:load [32m3.12ms[39m [fs] [2m/src/index.css[22m
+2026-09-26T22:24:14.302Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-09-26T22:24:14.302Z vite:import-analysis [32m0.67ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-09-26T22:24:14.302Z vite:transform [31m50.26ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.302Z vite:time [31m54.12ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.307Z vite:hmr [file change] [2mvite-debug.txt[22m
+[2m6:24:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+2026-09-26T22:24:14.308Z vite:hmr (ssr) [no modules matched] [2mvite-debug.txt[22m
+2026-09-26T22:24:14.315Z vite:load [32m1.16ms[39m [fs] [2m/src/index.css[22m
+2026-09-26T22:24:14.356Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-09-26T22:24:14.356Z vite:import-analysis [32m0.42ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-09-26T22:24:14.356Z vite:transform [33m40.68ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.356Z vite:time [33m42.29ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.361Z vite:hmr [file change] [2mvite-debug.txt[22m
+[2m6:24:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+2026-09-26T22:24:14.361Z vite:hmr (ssr) [no modules matched] [2mvite-debug.txt[22m
+2026-09-26T22:24:14.365Z vite:load [32m1.01ms[39m [fs] [2m/src/index.css[22m
+2026-09-26T22:24:14.393Z vite:hmr [self-accepts] [2msrc/index.css[22m
+2026-09-26T22:24:14.393Z vite:import-analysis [32m0.41ms[39m [2m[0 imports rewritten] [2msrc/index.css[22m[2m[22m
+2026-09-26T22:24:14.393Z vite:transform [33m27.49ms[39m [2m/src/index.css[22m
+2026-09-26T22:24:14.393Z vite:time [33m28.89ms[39m [2m/src/index.css[22m
+^CTerminate batch job (Y/N)? 
+^C

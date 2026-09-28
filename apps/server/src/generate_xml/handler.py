@@ -9,7 +9,7 @@ import uuid
 
 from src.shared.oclc_service import OCLCService
 from src.shared.oclc_token_manager import OCLCTokenManager
-from src.shared.auth_token_validation import validate_token
+#from src.shared.auth_token_validation import validate_token
 
 class GenerateXmlRequestDTO(BaseModel):
     """Data Transfer Object for XML generation request"""
@@ -23,18 +23,18 @@ async def main(req: func.HttpRequest) -> func.HttpResponse:
 
     try:
         # Validate Microsoft token
-        decoded_token = await validate_token(req)
-        if not decoded_token:
-            logging.error(f"[{correlation_id}] Token validation failed")
-            return func.HttpResponse(
-                json.dumps({
-                    "success": False,
-                    "error": "Unauthorized",
-                    "message": "Invalid token"
-                }),
-                status_code=401,
-                headers={"Content-Type": "application/json"}
-            )
+        # decoded_token = await validate_token(req)
+        # if not decoded_token:
+        #     logging.error(f"[{correlation_id}] Token validation failed")
+        #     return func.HttpResponse(
+        #         json.dumps({
+        #             "success": False,
+        #             "error": "Unauthorized",
+        #             "message": "Invalid token"
+        #         }),
+        #         status_code=401,
+        #         headers={"Content-Type": "application/json"}
+        #     )
 
         # Parse request body
         try:

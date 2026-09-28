@@ -312,7 +312,6 @@ async def call_azure_handler(request: Request, handler):
 # ---------------------------------------------------------------------------
 # Snapicat API endpoints
 # ---------------------------------------------------------------------------
-
 @app.post("/api/search_books")
 async def search_books(
     request: Request,
@@ -321,12 +320,16 @@ async def search_books(
     """
     Search books API endpoint.
 
-    Delegates to src.search_books.handler.main.
+    Authentication is handled by FastAPI using the local
+    Snapicat session. The underlying search handler is
+    responsible only for the OCLC operation.
     """
     from src.search_books.handler import main as handler
 
-    return await call_azure_handler(request, handler)
-
+    return await call_azure_handler(
+        request,
+        handler
+    )
 
 @app.post("/api/generate_xml")
 async def generate_xml(
